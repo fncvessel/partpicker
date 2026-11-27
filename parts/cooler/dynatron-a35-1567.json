@@ -1,0 +1,12 @@
+{
+  "id": "dynatron-a35-1567",
+  "name": "Dynatron A35 (LGA1567 active)",
+  "brand": "Dynatron",
+  "price": 30,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA1567"],
+  "heightMm": 64,
+  "ratedW": 130,
+  "notes": "Used-market price estimate."
+}

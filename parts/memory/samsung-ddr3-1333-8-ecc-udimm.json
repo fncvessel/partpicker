@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr3-1333-8-ecc-udimm",
+  "name": "Samsung DDR3-1333 8 GB ECC UDIMM",
+  "brand": "Samsung",
+  "price": 10,
+  "tags": ["workstation", "server"],
+  "type": "DDR3",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 8,
+  "sticks": 1,
+  "speed": 1333,
+  "notes": "Used-market price estimate."
+}

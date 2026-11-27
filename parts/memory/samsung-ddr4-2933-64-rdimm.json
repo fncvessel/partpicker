@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr4-2933-64-rdimm",
+  "name": "Samsung DDR4-2933 64 GB RDIMM",
+  "brand": "Samsung",
+  "price": 210,
+  "tags": ["server"],
+  "type": "DDR4",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 64,
+  "sticks": 1,
+  "speed": 2933,
+  "notes": "Pulled from servers. Used-market price estimate."
+}

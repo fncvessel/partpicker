@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr3-1600-8-ecc-udimm",
+  "name": "Samsung DDR3-1600 8 GB ECC UDIMM",
+  "brand": "Samsung",
+  "price": 12,
+  "tags": ["workstation", "server"],
+  "type": "DDR3",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 8,
+  "sticks": 1,
+  "speed": 1600,
+  "notes": "Max size for E3 v1–v4 boards. Used-market price estimate."
+}

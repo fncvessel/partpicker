@@ -1,0 +1,11 @@
+{
+  "id": "noctua-nh-u12s-dx-4189",
+  "name": "Noctua NH-U12S DX-4189",
+  "brand": "Noctua",
+  "price": 110,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA4189"],
+  "heightMm": 158,
+  "ratedW": 270
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-p2000",
+  "name": "NVIDIA Quadro P2000",
+  "brand": "NVIDIA",
+  "price": 110,
+  "tags": ["workstation", "server"],
+  "vramGB": 5,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 201,
+  "powerW": 75,
+  "conn": {},
+  "cooling": "blower",
+  "lowProfile": false,
+  "notes": "Pascal, slot powered. Popular for transcoding. Used-market price estimate."
+}

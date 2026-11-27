@@ -1,0 +1,17 @@
+{
+  "id": "lsi-9211-8i",
+  "name": "LSI 9211-8i (SAS2008, IT mode)",
+  "brand": "Broadcom (LSI)",
+  "price": 25,
+  "tags": ["server"],
+  "kind": "HBA",
+  "gen": 2,
+  "lanes": 8,
+  "size": 8,
+  "watts": 10,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "sasPorts": 8,
+  "nvmePorts": 0,
+  "notes": "6 Gb/s SAS/SATA. Usually flashed to IT mode for ZFS. Used-market price estimate."
+}

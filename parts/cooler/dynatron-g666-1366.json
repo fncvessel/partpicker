@@ -1,0 +1,12 @@
+{
+  "id": "dynatron-g666-1366",
+  "name": "Dynatron G666 (LGA1366 active)",
+  "brand": "Dynatron",
+  "price": 25,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA1366"],
+  "heightMm": 65,
+  "ratedW": 130,
+  "notes": "Used-market price estimate."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "noctua-nh-u12s-dx-3647",
+  "name": "Noctua NH-U12S DX-3647",
+  "brand": "Noctua",
+  "price": 100,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA3647"],
+  "heightMm": 158,
+  "ratedW": 205,
+  "notes": "Fits square and narrow LGA3647."
+}

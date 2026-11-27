@@ -1,0 +1,17 @@
+{
+  "id": "intel-x540-t2",
+  "name": "Intel X540-T2 2×10GBase-T",
+  "brand": "Intel",
+  "price": 45,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 2,
+  "lanes": 8,
+  "size": 8,
+  "watts": 13,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "notes": "Runs hot; needs some airflow. Used-market price estimate."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "supermicro-snk-p0078p",
+  "name": "Supermicro SNK-P0078P (2U passive, LGA4189)",
+  "brand": "Supermicro",
+  "price": 60,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["LGA4189"],
+  "heightMm": 64,
+  "ratedW": 205,
+  "notes": "Needs server airflow. Used-market price estimate."
+}

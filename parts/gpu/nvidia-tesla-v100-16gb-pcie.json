@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-tesla-v100-16gb-pcie",
+  "name": "NVIDIA Tesla V100 16 GB PCIe",
+  "brand": "NVIDIA",
+  "price": 450,
+  "tags": ["server"],
+  "vramGB": 16,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 250,
+  "conn": { "pcie8": 1 },
+  "cooling": "passive",
+  "lowProfile": false,
+  "notes": "Volta. CPU 8-pin (EPS) power plug. Used-market price estimate."
+}

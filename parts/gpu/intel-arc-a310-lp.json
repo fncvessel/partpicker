@@ -1,0 +1,18 @@
+{
+  "id": "intel-arc-a310-lp",
+  "name": "Intel Arc A310 Low Profile",
+  "brand": "Intel",
+  "price": 110,
+  "tags": ["consumer", "server"],
+  "vramGB": 4,
+  "gen": 4,
+  "lanes": 8,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 160,
+  "powerW": 75,
+  "conn": {},
+  "cooling": "open-air",
+  "lowProfile": true,
+  "notes": "AV1 encode. Wants Resizable BAR, which pre-2017 Xeon boards lack. Used-market price estimate."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-tesla-p40",
+  "name": "NVIDIA Tesla P40",
+  "brand": "NVIDIA",
+  "price": 260,
+  "tags": ["server"],
+  "vramGB": 24,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 250,
+  "conn": { "pcie8": 1 },
+  "cooling": "passive",
+  "lowProfile": false,
+  "notes": "Pascal. Uses a CPU 8-pin (EPS) power plug, so it needs an adapter on most PSUs. Needs Above 4G decoding. Used-market price estimate."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "noctua-nh-u14s-dx-3647",
+  "name": "Noctua NH-U14S DX-3647",
+  "brand": "Noctua",
+  "price": 110,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA3647"],
+  "heightMm": 165,
+  "ratedW": 255
+}

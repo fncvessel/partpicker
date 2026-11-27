@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr3-1866-16-rdimm",
+  "name": "Samsung DDR3-1866 16 GB RDIMM",
+  "brand": "Samsung",
+  "price": 12,
+  "tags": ["server"],
+  "type": "DDR3",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 16,
+  "sticks": 1,
+  "speed": 1866,
+  "notes": "Used-market price estimate."
+}

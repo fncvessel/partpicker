@@ -1,0 +1,12 @@
+{
+  "id": "supermicro-snk-p0067pd",
+  "name": "Supermicro SNK-P0067PD (2U passive, LGA3647 narrow)",
+  "brand": "Supermicro",
+  "price": 35,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["LGA3647"],
+  "heightMm": 64,
+  "ratedW": 165,
+  "notes": "Needs server airflow. Used-market price estimate."
+}

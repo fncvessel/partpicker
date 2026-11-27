@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr4-2133-16-rdimm",
+  "name": "Samsung DDR4-2133 16 GB RDIMM",
+  "brand": "Samsung",
+  "price": 30,
+  "tags": ["server"],
+  "type": "DDR4",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 16,
+  "sticks": 1,
+  "speed": 2133,
+  "notes": "Pulled from servers. Used-market price estimate."
+}

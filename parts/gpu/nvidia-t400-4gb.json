@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-t400-4gb",
+  "name": "NVIDIA T400 4 GB",
+  "brand": "NVIDIA",
+  "price": 100,
+  "tags": ["workstation", "server"],
+  "vramGB": 4,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 160,
+  "powerW": 30,
+  "conn": {},
+  "cooling": "open-air",
+  "lowProfile": true,
+  "notes": "Turing. Used-market price estimate."
+}

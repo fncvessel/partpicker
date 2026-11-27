@@ -8,7 +8,8 @@
     "validate": "node scripts/validate-parts.js",
     "format": "node scripts/validate-parts.js --fix",
     "test": "node scripts/validate-parts.js && node --test test/*.test.js",
-    "import": "node scripts/import-dataset.js"
+    "import": "node scripts/import-dataset.js",
+    "import:xeons": "node scripts/import-xeons.js"
   },
   "license": "UNLICENSED"
 }

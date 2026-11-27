@@ -96,3 +96,14 @@ test('DDR4 Threadripper: TRX40 and WRX80 builds are clean, generations stay apar
   assert.ok(rules(ev([{ id: 'tr-3970x', qty: 1 }, { id: 'asus-zenith-extreme', qty: 1 }]), 'error').includes('cpu-socket'));
   assert.ok(rules(ev([{ id: 'tr-3970x', qty: 1 }, { id: 'asrock-trx40-creator', qty: 1 }, { id: 'samsung-ddr4-3200-32-rdimm', qty: 4 }]), 'error').includes('mem-module'));
 });
+
+test('Legacy Xeons: DDR3 and DDR4 server builds are clean, platforms and generations stay apart', () => {
+  const x9 = ev([{ id: 'xeon-e5-2680-v2', qty: 2 }, { id: 'supermicro-x9dri-ln4f-plus', qty: 1 }, { id: 'samsung-ddr3-1600-16-rdimm', qty: 8 }, { id: 'noctua-nh-u9dx-i4', qty: 2 }]);
+  assert.deepStrictEqual(x9.issues.filter((i) => i.level === 'error'), []);
+  const x11 = ev([{ id: 'xeon-gold-6230', qty: 1 }, { id: 'supermicro-x11spi-tf', qty: 1 }, { id: 'samsung-ddr4-2933-64-rdimm', qty: 6 }, { id: 'noctua-nh-u12s-dx-3647', qty: 1 }]);
+  assert.deepStrictEqual(x11.issues.filter((i) => i.level === 'error'), []);
+  assert.ok(rules(ev([{ id: 'xeon-e5-2680-v2', qty: 1 }, { id: 'supermicro-x9srl-f', qty: 1 }, { id: 'samsung-ddr4-2400-32-rdimm', qty: 4 }]), 'error').includes('mem-type'));
+  assert.ok(rules(ev([{ id: 'xeon-e-2288g', qty: 1 }, { id: 'supermicro-x11ssh-f', qty: 1 }]), 'error').includes('cpu-platform'));
+  assert.ok(rules(ev([{ id: 'xeon-e3-1230-v2', qty: 1 }, { id: 'supermicro-x9scm-f', qty: 1 }, { id: 'samsung-ddr3-1600-16-rdimm', qty: 2 }]), 'error').includes('mem-module'));
+  assert.ok(rules(ev([{ id: 'xeon-e5-2680-v2', qty: 1 }, { id: 'supermicro-x9dri-ln4f-plus', qty: 1 }, { id: 'samsung-ddr3-1600-16-rdimm', qty: 12 }])).includes('mem-3dpc'));
+});
