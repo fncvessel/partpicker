@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-rtx-8000",
+  "name": "NVIDIA Quadro RTX 8000",
+  "brand": "NVIDIA",
+  "price": 2000,
+  "tags": ["workstation"],
+  "vramGB": 48,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 295,
+  "conn": { "pcie8": 2 },
+  "cooling": "blower",
+  "lowProfile": false,
+  "notes": "Turing. One 8-pin plus one 6-pin; 295 W includes the VirtualLink port. Used-market price estimate."
+}

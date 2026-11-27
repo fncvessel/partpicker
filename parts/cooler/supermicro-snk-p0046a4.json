@@ -1,0 +1,12 @@
+{
+  "id": "supermicro-snk-p0046a4",
+  "name": "Supermicro SNK-P0046A4 (LGA115x active)",
+  "brand": "Supermicro",
+  "price": 20,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA1156", "LGA1155", "LGA1150", "LGA1151", "LGA1200"],
+  "heightMm": 46,
+  "ratedW": 95,
+  "notes": "Used-market price estimate."
+}

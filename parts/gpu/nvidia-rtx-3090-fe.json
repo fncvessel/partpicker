@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-rtx-3090-fe",
+  "name": "NVIDIA GeForce RTX 3090 Founders Edition",
+  "brand": "NVIDIA",
+  "price": 750,
+  "tags": ["consumer", "workstation"],
+  "vramGB": 24,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 3,
+  "lengthMm": 313,
+  "powerW": 350,
+  "conn": { "pcie8": 2 },
+  "cooling": "open-air",
+  "lowProfile": false,
+  "notes": "12-pin plug with the included 2× 8-pin adapter. Popular used card for local LLMs. Used-market price estimate."
+}

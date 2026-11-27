@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-p1000",
+  "name": "NVIDIA Quadro P1000",
+  "brand": "NVIDIA",
+  "price": 80,
+  "tags": ["workstation", "server"],
+  "vramGB": 4,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 160,
+  "powerW": 47,
+  "conn": {},
+  "cooling": "open-air",
+  "lowProfile": true,
+  "notes": "Pascal. Used-market price estimate."
+}

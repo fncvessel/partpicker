@@ -1,0 +1,14 @@
+{
+  "id": "micron-ddr4-2666-16-ecc-udimm",
+  "name": "Micron DDR4-2666 16 GB ECC UDIMM",
+  "brand": "Micron",
+  "price": 70,
+  "tags": ["workstation", "server"],
+  "type": "DDR4",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 16,
+  "sticks": 1,
+  "speed": 2666,
+  "notes": "Used-market price estimate."
+}

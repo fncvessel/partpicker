@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-tesla-m40-24gb",
+  "name": "NVIDIA Tesla M40 24 GB",
+  "brand": "NVIDIA",
+  "price": 90,
+  "tags": ["server"],
+  "vramGB": 24,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 250,
+  "conn": { "pcie8": 1 },
+  "cooling": "passive",
+  "lowProfile": false,
+  "notes": "Maxwell. CPU 8-pin (EPS) power plug; needs an adapter. Used-market price estimate."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "amd-instinct-mi50-32gb",
+  "name": "AMD Instinct MI50 32 GB",
+  "brand": "AMD",
+  "price": 160,
+  "tags": ["server"],
+  "vramGB": 32,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "pcie8": 2 },
+  "cooling": "passive",
+  "lowProfile": false,
+  "notes": "Vega 20. Passive, needs server airflow. Used-market price estimate."
+}

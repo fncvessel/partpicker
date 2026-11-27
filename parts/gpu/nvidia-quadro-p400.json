@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-p400",
+  "name": "NVIDIA Quadro P400",
+  "brand": "NVIDIA",
+  "price": 40,
+  "tags": ["workstation", "server"],
+  "vramGB": 2,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 145,
+  "powerW": 30,
+  "conn": {},
+  "cooling": "open-air",
+  "lowProfile": true,
+  "notes": "Pascal. Common Plex/Jellyfin transcode card. Used-market price estimate."
+}

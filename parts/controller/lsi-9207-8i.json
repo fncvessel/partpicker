@@ -1,0 +1,17 @@
+{
+  "id": "lsi-9207-8i",
+  "name": "LSI 9207-8i (SAS2308)",
+  "brand": "Broadcom (LSI)",
+  "price": 30,
+  "tags": ["server"],
+  "kind": "HBA",
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 10,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "sasPorts": 8,
+  "nvmePorts": 0,
+  "notes": "6 Gb/s SAS/SATA, IT firmware from the factory. Used-market price estimate."
+}

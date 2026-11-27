@@ -1,0 +1,17 @@
+{
+  "id": "intel-x520-da2",
+  "name": "Intel X520-DA2 2×10G SFP+",
+  "brand": "Intel",
+  "price": 25,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 2,
+  "lanes": 8,
+  "size": 8,
+  "watts": 8,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "notes": "Used-market price estimate."
+}

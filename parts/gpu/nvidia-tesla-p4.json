@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-tesla-p4",
+  "name": "NVIDIA Tesla P4",
+  "brand": "NVIDIA",
+  "price": 90,
+  "tags": ["server"],
+  "vramGB": 8,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 168,
+  "powerW": 75,
+  "conn": {},
+  "cooling": "passive",
+  "lowProfile": true,
+  "notes": "Pascal. Passive, needs server airflow or a fan shroud. Used-market price estimate."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-rtx-6000",
+  "name": "NVIDIA Quadro RTX 6000",
+  "brand": "NVIDIA",
+  "price": 1300,
+  "tags": ["workstation"],
+  "vramGB": 24,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 295,
+  "conn": { "pcie8": 2 },
+  "cooling": "blower",
+  "lowProfile": false,
+  "notes": "Turing. One 8-pin plus one 6-pin; 295 W includes the VirtualLink port. Used-market price estimate."
+}

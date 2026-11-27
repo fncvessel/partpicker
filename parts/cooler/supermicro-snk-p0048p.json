@@ -1,0 +1,12 @@
+{
+  "id": "supermicro-snk-p0048p",
+  "name": "Supermicro SNK-P0048P (2U passive, narrow ILM)",
+  "brand": "Supermicro",
+  "price": 20,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["LGA2011", "LGA2011-3", "LGA2011-1"],
+  "heightMm": 64,
+  "ratedW": 145,
+  "notes": "Needs server airflow. Used-market price estimate."
+}

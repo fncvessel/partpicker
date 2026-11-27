@@ -1,0 +1,17 @@
+{
+  "id": "lsi-9305-16i",
+  "name": "LSI 9305-16i (SAS3224)",
+  "brand": "Broadcom (LSI)",
+  "price": 120,
+  "tags": ["server"],
+  "kind": "HBA",
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 13,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "sasPorts": 16,
+  "nvmePorts": 0,
+  "notes": "12 Gb/s SAS/SATA. Used-market price estimate."
+}

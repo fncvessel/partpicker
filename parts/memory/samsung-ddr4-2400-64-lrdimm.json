@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr4-2400-64-lrdimm",
+  "name": "Samsung DDR4-2400 64 GB LRDIMM",
+  "brand": "Samsung",
+  "price": 110,
+  "tags": ["server"],
+  "type": "DDR4",
+  "module": "LRDIMM",
+  "ecc": true,
+  "gb": 64,
+  "sticks": 1,
+  "speed": 2400,
+  "notes": "Pulled from servers. Used-market price estimate."
+}

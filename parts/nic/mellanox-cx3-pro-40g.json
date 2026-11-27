@@ -1,0 +1,17 @@
+{
+  "id": "mellanox-cx3-pro-40g",
+  "name": "Mellanox ConnectX-3 Pro 2×40G QSFP+",
+  "brand": "NVIDIA (Mellanox)",
+  "price": 40,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 40,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 9,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "notes": "Used-market price estimate."
+}

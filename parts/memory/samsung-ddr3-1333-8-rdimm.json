@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr3-1333-8-rdimm",
+  "name": "Samsung DDR3-1333 8 GB RDIMM",
+  "brand": "Samsung",
+  "price": 4,
+  "tags": ["server"],
+  "type": "DDR3",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 8,
+  "sticks": 1,
+  "speed": 1333,
+  "notes": "Used-market price estimate."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-tesla-t4",
+  "name": "NVIDIA Tesla T4",
+  "brand": "NVIDIA",
+  "price": 550,
+  "tags": ["server"],
+  "vramGB": 16,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 168,
+  "powerW": 70,
+  "conn": {},
+  "cooling": "passive",
+  "lowProfile": true,
+  "notes": "Turing. Passive, needs server airflow. Used-market price estimate."
+}

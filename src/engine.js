@@ -24,6 +24,10 @@
     'tr-7000': 'Threadripper 7000', 'tr-9000': 'Threadripper 9000', 'tr-pro-7000': 'Threadripper PRO 7000WX', 'tr-pro-9000': 'Threadripper PRO 9000WX', 'tr-1000-2000': 'Threadripper 1000/2000', 'tr-3000': 'Threadripper 3000', 'tr-pro-3000': 'Threadripper PRO 3000WX', 'tr-pro-5000': 'Threadripper PRO 5000WX',
     'xeon-w-2400': 'Xeon W-2400', 'xeon-w-3400': 'Xeon W-3400', 'xeon-sp-4': '4th gen Xeon Scalable', 'xeon-sp-5': '5th gen Xeon Scalable',
     'epyc-9004': 'EPYC 9004', 'epyc-8004': 'EPYC 8004', 'xeon-w-3500': 'Xeon W-3500', 'epyc-9005': 'EPYC 9005', 'epyc-7003': 'EPYC 7003',
+    'xeon-3400': 'Xeon 3400', 'lga1366': 'Xeon 3500/5500/5600 (LGA1366)', 'xeon-7500-e7': 'Xeon 7500 / E7 v1', 'xeon-e3-v1v2': 'Xeon E3 v1/v2',
+    'xeon-e3-v3v4': 'Xeon E3 v3/v4', 'xeon-e3-v5v6': 'Xeon E3 v5/v6', 'xeon-e-2100-2200': 'Xeon E-2100/2200', 'xeon-e5-2400': 'Xeon E5-2400 v1/v2',
+    'xeon-e5-v1v2': 'Xeon E5 v1/v2', 'xeon-e5-v3v4': 'Xeon E5 v3/v4', 'xeon-e7-v2': 'Xeon E7 v2', 'xeon-e7-v3v4': 'Xeon E7 v3/v4',
+    'xeon-w-2100-2200': 'Xeon W-2100/2200', 'xeon-w-3200': 'Xeon W-3200', 'xeon-sp-1-2': '1st/2nd gen Xeon Scalable', 'xeon-sp-3': '3rd gen Xeon Scalable',
   };
 
   const IFACE_NAMES = { m2: 'M.2 NVMe', sata: 'SATA', sas: 'SAS', u2: 'U.2 NVMe', u3: 'U.3 NVMe', e1s: 'E1.S NVMe', e3s: 'E3.S NVMe' };
@@ -39,9 +43,9 @@
   const uniq = (arr) => Array.from(new Set(arr));
 
   function stickWatts(m) {
-    if (m.module === 'RDIMM') return m.type === 'DDR5' ? 10 : 6;
+    if (m.module === 'RDIMM') return m.type === 'DDR5' ? 10 : m.type === 'DDR3' ? 5 : 6;
     if (m.module === 'LRDIMM') return 8;
-    return 4;
+    return m.type === 'DDR3' ? 3 : 4;
   }
 
   function evaluate(build, parts) {
@@ -152,6 +156,8 @@
         if (memStats.sticks < ch) add('info', 'mem-channels', `${memStats.sticks} of ${ch} memory channels filled. Use ${ch} sticks for full bandwidth.`, ids);
         else if (memStats.sticks % ch !== 0) add('info', 'mem-balance', `${memStats.sticks} sticks across ${ch} channels is uneven. Use a multiple of ${ch} for balanced bandwidth.`, ids);
         if (types[0] === 'DDR5' && memStats.sticks > ch && memStats.sticks <= (memStats.slots || Infinity)) add('info', 'mem-2dpc', 'Two DDR5 sticks per channel usually lowers the top memory speed.', ids);
+        if (types[0] === 'DDR3' && memStats.sticks > ch * 2 && modules[0] !== 'LRDIMM') add('info', 'mem-3dpc', 'Three DDR3 sticks per channel drops memory to 1066 or 800 MT/s on most boards.', ids);
+        if (types[0] === 'DDR3' && modules[0] === 'UDIMM' && memItems.some((x) => x.part.gb > 8)) add('warn', 'mem-ddr3-udimm', 'DDR3 unbuffered DIMMs top out at 8 GB on nearly every board. 16 GB UDIMMs only work on a few late chipsets.', ids);
       }
       if (activeSockets === 2 && memStats.sticks % 2 === 1) add('warn', 'mem-numa', 'Odd stick count on a dual-socket board leaves the CPUs unbalanced. Split memory evenly between sockets.', ids);
     }

@@ -1,0 +1,14 @@
+{
+  "id": "hynix-ddr3-1600-32-lrdimm",
+  "name": "SK hynix DDR3-1600 32 GB LRDIMM",
+  "brand": "SK hynix",
+  "price": 22,
+  "tags": ["server"],
+  "type": "DDR3",
+  "module": "LRDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 1600,
+  "notes": "Used-market price estimate."
+}

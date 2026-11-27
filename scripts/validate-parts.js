@@ -32,9 +32,9 @@ const SCHEMA = {
   cooler: { type: 's', sockets: 'S', heightMm: 'n', ratedW: 'n', radMm: 'n?' },
 };
 const ENUMS = {
-  'cpu.memTypes': enumOf('DDR4', 'DDR5'), 'cpu.memModules': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
-  'motherboard.formFactor': enumOf(...FORM_FACTORS), 'motherboard.memType': enumOf('DDR4', 'DDR5'), 'motherboard.memModules': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
-  'memory.type': enumOf('DDR4', 'DDR5'), 'memory.module': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
+  'cpu.memTypes': enumOf('DDR3', 'DDR4', 'DDR5'), 'cpu.memModules': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
+  'motherboard.formFactor': enumOf(...FORM_FACTORS), 'motherboard.memType': enumOf('DDR3', 'DDR4', 'DDR5'), 'motherboard.memModules': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
+  'memory.type': enumOf('DDR3', 'DDR4', 'DDR5'), 'memory.module': enumOf('UDIMM', 'RDIMM', 'LRDIMM'),
   'gpu.cooling': enumOf('open-air', 'blower', 'passive'),
   'storage.iface': enumOf('m2', 'sata', 'sas', 'u2', 'u3', 'e1s', 'e3s'), 'storage.form': enumOf('M.2 2280', 'M.2 22110', '2.5"', '3.5"', 'E1.S', 'E3.S'),
   'storage.media': enumOf('SSD', 'HDD'), 'nic.form': enumOf('pcie', 'ocp3'), 'psu.form': enumOf('ATX', 'SFX', 'Server module'),

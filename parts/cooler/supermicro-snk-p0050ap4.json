@@ -1,0 +1,12 @@
+{
+  "id": "supermicro-snk-p0050ap4",
+  "name": "Supermicro SNK-P0050AP4 (4U active, square ILM)",
+  "brand": "Supermicro",
+  "price": 30,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA2011", "LGA2011-3", "LGA2066"],
+  "heightMm": 126,
+  "ratedW": 160,
+  "notes": "Used-market price estimate."
+}

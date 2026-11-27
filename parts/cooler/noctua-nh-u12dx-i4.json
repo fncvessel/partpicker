@@ -1,0 +1,12 @@
+{
+  "id": "noctua-nh-u12dx-i4",
+  "name": "Noctua NH-U12DX i4",
+  "brand": "Noctua",
+  "price": 80,
+  "tags": ["workstation", "server"],
+  "type": "air",
+  "sockets": ["LGA2011", "LGA2011-1", "LGA2011-3", "LGA2066", "LGA1356", "LGA1366"],
+  "heightMm": 158,
+  "ratedW": 160,
+  "notes": "Fits square and narrow ILM."
+}

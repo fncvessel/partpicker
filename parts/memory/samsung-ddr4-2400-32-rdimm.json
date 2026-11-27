@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr4-2400-32-rdimm",
+  "name": "Samsung DDR4-2400 32 GB RDIMM",
+  "brand": "Samsung",
+  "price": 60,
+  "tags": ["server"],
+  "type": "DDR4",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 2400,
+  "notes": "Pulled from servers. Used-market price estimate."
+}

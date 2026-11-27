@@ -1,0 +1,17 @@
+{
+  "id": "chelsio-t520-cr",
+  "name": "Chelsio T520-CR 2×10G SFP+",
+  "brand": "Chelsio",
+  "price": 35,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 13,
+  "widthSlots": 1,
+  "lowProfile": true,
+  "notes": "Used-market price estimate."
+}

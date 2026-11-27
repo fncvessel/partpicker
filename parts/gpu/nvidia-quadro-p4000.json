@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-quadro-p4000",
+  "name": "NVIDIA Quadro P4000",
+  "brand": "NVIDIA",
+  "price": 180,
+  "tags": ["workstation"],
+  "vramGB": 8,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 241,
+  "powerW": 105,
+  "conn": { "pcie8": 1 },
+  "cooling": "blower",
+  "lowProfile": false,
+  "notes": "Pascal, one 6-pin. Used-market price estimate."
+}

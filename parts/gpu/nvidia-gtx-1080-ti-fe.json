@@ -1,0 +1,18 @@
+{
+  "id": "nvidia-gtx-1080-ti-fe",
+  "name": "NVIDIA GeForce GTX 1080 Ti Founders Edition",
+  "brand": "NVIDIA",
+  "price": 170,
+  "tags": ["consumer"],
+  "vramGB": 11,
+  "gen": 3,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 250,
+  "conn": { "pcie8": 2 },
+  "cooling": "blower",
+  "lowProfile": false,
+  "notes": "One 8-pin plus one 6-pin. Used-market price estimate."
+}
