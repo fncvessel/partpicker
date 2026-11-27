@@ -1,7 +1,7 @@
 (function () {
   'use strict';
-  const { parts, presets, pricesAsOf } = window.SLOTWISE_CATALOG;
-  const { evaluate, checkCandidate, CATEGORIES, IFACE_NAMES } = window.SLOTWISE_ENGINE;
+  const { parts, presets, pricesAsOf, mergeImported } = window.SLOTWISE_CATALOG;
+  const { evaluate, checkCandidate, errorKeys, CATEGORIES, IFACE_NAMES } = window.SLOTWISE_ENGINE;
   const byId = new Map(parts.map((p) => [p.id, p]));
   const STORE_KEY = 'slotwise.build.v2';
 
@@ -11,11 +11,12 @@
   const asOf = new Date(pricesAsOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   const priceTag = (p, n) => p.priceChecked
     ? `<span class="price" title="Lowest US street price seen ${asOf}">${money(n)}</span>`
-    : `<span class="price est" title="Estimate. No current listing found.">~${money(n)}</span>`;
+    : `<span class="price est" title="${p.source === 'dataset' ? 'Estimate: July 2025 listing adjusted for current market prices' : 'Estimate. No current listing found.'}">~${money(n)}</span>`;
+  const PICK_LIMIT = 120;
 
   // ---------- state ----------
   let build = load() || { name: 'My build', items: [] };
-  let pick = { cat: null, q: '', seg: 'all', onlyOk: true };
+  let pick = { cat: null, q: '', seg: 'all', onlyOk: true, sort: 'popular' };
 
   function clone(p) { return { name: p.name, items: p.items.map((i) => ({ id: i.id, qty: i.qty })) }; }
   function load() {
@@ -34,7 +35,7 @@
   const join = (a) => a.filter(Boolean).join(' · ');
   function specLine(p) {
     switch (p.cat) {
-      case 'cpu': return join([p.socket, `${p.cores}C/${p.threads}T`, `${p.powerW} W`, `${p.memChannels}-ch ${p.memTypes.join('/')} ${p.memModules.join('/')}`, `${p.lanes} lanes PCIe ${p.pcieGen}.0`, p.maxSockets > 1 ? `up to ${p.maxSockets}P` : '1P only', p.igpu ? 'iGPU' : '']);
+      case 'cpu': return join([p.socket, p.threads ? `${p.cores}C/${p.threads}T` : `${p.cores} cores`, `${p.powerW} W`, `${p.memChannels}-ch ${p.memTypes.join('/')} ${p.memModules.join('/')}`, `${p.lanes} lanes PCIe ${p.pcieGen}.0`, p.maxSockets > 1 ? `up to ${p.maxSockets}P` : '1P only', p.igpu ? 'iGPU' : '']);
       case 'motherboard': {
         const slots = p.pcie.reduce((s, g) => s + g.n, 0), m2n = p.m2.reduce((s, g) => s + g.n, 0);
         return join([p.sockets > 1 ? `${p.sockets}× ${p.socket}` : p.socket, p.chipset, p.formFactor, `${p.dimmSlots}× ${p.memType} ${p.memModules.join('/')}${p.ecc ? ' ECC' : ''}`, `${slots} PCIe`, `${m2n} M.2`, p.sata ? `${p.sata} SATA` : '', p.nvmePorts ? `${p.nvmePorts} NVMe ports` : '', p.ocp ? 'OCP 3.0' : '', p.bmc ? 'BMC' : '']);
@@ -135,7 +136,7 @@
       if (parts.length) meters.push(`<div class="meter sub"><span>${parts.join(', ')}</span></div>`);
     }
     if (stats.storage.drives) meters.push(meter('Storage', 0, null, `${stats.storage.drives} drive${stats.storage.drives > 1 ? 's' : ''}, ${+stats.storage.tb.toFixed(2)} TB raw`));
-    if (stats.cores) meters.push(meter('Compute', 0, null, `${stats.cores} cores / ${stats.threads} threads`));
+    if (stats.cores) meters.push(meter('Compute', 0, null, stats.threads ? `${stats.cores} cores / ${stats.threads} threads` : `${stats.cores} cores`));
 
     const label = { error: 'Problem', warn: 'Check', info: 'Note' };
     const list = r.issues.map((i) => `<li class="issue lvl-${i.level}"><span class="tag">${label[i.level]}</span><span>${esc(i.msg)}</span></li>`).join('');
@@ -160,14 +161,18 @@
   }
   function renderPicker() {
     const q = pick.q.trim().toLowerCase();
+    const baseline = errorKeys(build, byId);
     const rows = parts
       .filter((p) => p.cat === pick.cat)
       .filter((p) => pick.seg === 'all' || p.tags.includes(pick.seg))
       .filter((p) => !q || (p.name + ' ' + p.brand + ' ' + specLine(p)).toLowerCase().includes(q))
-      .map((p) => ({ p, c: checkCandidate(build, p, byId), inBuild: build.items.some((i) => i.id === p.id) }));
-    const shown = rows.filter((r) => !pick.onlyOk || r.c.ok).sort((a, b) => (b.c.ok - a.c.ok) || a.p.price - b.p.price);
+      .map((p) => ({ p, c: checkCandidate(build, p, byId, baseline), inBuild: build.items.some((i) => i.id === p.id) }));
+    const shown = rows.filter((r) => !pick.onlyOk || r.c.ok).sort((a, b) => (b.c.ok - a.c.ok) || (pick.sort === 'price-asc' ? a.p.price - b.p.price : pick.sort === 'price-desc' ? b.p.price - a.p.price : (a.p.rank || 0) - (b.p.rank || 0)));
     const hidden = rows.length - shown.length;
     const multi = CATEGORIES.find((c) => c.key === pick.cat).multi;
+    const total = shown.length;
+    shown.length = Math.min(shown.length, PICK_LIMIT);
+    const more = total > PICK_LIMIT ? `<li class="empty">Showing ${PICK_LIMIT} of ${total.toLocaleString()}. Search to narrow it down.</li>` : '';
     $('#pick-list').innerHTML = shown.length ? shown.map(({ p, c, inBuild }) => `
       <li class="pick-row ${c.ok ? '' : 'is-bad'}">
         <div class="part-main">
@@ -179,7 +184,7 @@
           ${priceTag(p, p.price)}
           ${inBuild && !multi ? '<span class="muted">In build</span>' : `<button type="button" class="${c.ok ? 'primary' : 'ghost'}" data-act="choose" data-id="${p.id}">${inBuild ? 'Add one more' : 'Add'}</button>`}
         </div>
-      </li>`).join('') : `<li class="empty">Nothing here fits the current build${pick.onlyOk ? '. Turn off "Only compatible" to see everything.' : '.'}</li>`;
+      </li>`).join('') + more : `<li class="empty">Nothing here fits the current build${pick.onlyOk ? '. Turn off "Only compatible" to see everything.' : '.'}</li>`;
     $('#pick-hidden').textContent = pick.onlyOk && hidden ? `${hidden} hidden` : '';
     document.querySelectorAll('[data-seg]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.seg === pick.seg)));
   }
@@ -204,7 +209,9 @@
       case 'close': b.closest('dialog').close(); break;
     }
   });
-  $('#pick-q').addEventListener('input', (e) => { pick.q = e.target.value; renderPicker(); });
+  let qTimer = 0;
+  $('#pick-q').addEventListener('input', (e) => { pick.q = e.target.value; clearTimeout(qTimer); qTimer = setTimeout(renderPicker, 120); });
+  $('#pick-sort').addEventListener('change', (e) => { pick.sort = e.target.value; renderPicker(); });
   $('#pick-ok').addEventListener('change', (e) => { pick.onlyOk = e.target.checked; renderPicker(); });
   document.querySelectorAll('[data-seg]').forEach((b) => b.addEventListener('click', () => { pick.seg = b.dataset.seg; renderPicker(); }));
   $('#build-name').addEventListener('change', (e) => { build.name = e.target.value.trim() || 'My build'; save(); });
@@ -245,4 +252,14 @@
   });
 
   render();
+
+  // Bulk-imported parts live beside the page in parts.json; the curated catalog works without them.
+  fetch('parts.json').then((r) => (r.ok ? r.json() : [])).then((list) => {
+    if (!mergeImported(list)) return;
+    for (const p of parts) byId.set(p.id, p);
+    const saved = load();
+    if (saved && saved.items.length > build.items.length) build = saved;
+    render();
+    if ($('#picker').open) renderPicker();
+  }).catch(() => { /* offline or missing: keep the curated catalog */ });
 })();

@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Slotwise</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +34,12 @@
       <button type="button" data-seg="workstation">Workstation</button>
       <button type="button" data-seg="server">Server</button>
     </div>
+    <label class="sr" for="pick-sort">Sort</label>
+    <select id="pick-sort">
+      <option value="popular">Popular</option>
+      <option value="price-asc">Price, low to high</option>
+      <option value="price-desc">Price, high to low</option>
+    </select>
     <label class="check"><input id="pick-ok" type="checkbox" checked> Only compatible <span id="pick-hidden" class="muted"></span></label>
   </div>
   <ul id="pick-list" class="pick-list"></ul>

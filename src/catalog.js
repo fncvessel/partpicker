@@ -174,13 +174,14 @@
   ]);
 
   // ---------- CPU coolers ----------
-  const desk = ['AM5', 'LGA1700', 'LGA1851'];
+  const desk = ['AM5', 'AM4', 'LGA1700', 'LGA1851', 'LGA1200'];
+  const deskAio = ['AM5', 'AM4', 'LGA1700', 'LGA1851'];
   add('cooler', [
     { id: 'thermalright-pa120se', name: 'Thermalright Peerless Assassin 120 SE', brand: 'Thermalright', price: 35, tags: ['consumer'], type: 'air', sockets: desk, heightMm: 155, ratedW: 245 },
     { id: 'noctua-nh-d15-g2', name: 'Noctua NH-D15 G2', brand: 'Noctua', price: 149, tags: ['consumer', 'workstation'], type: 'air', sockets: desk, heightMm: 168, ratedW: 250 },
     { id: 'noctua-nh-d12l', name: 'Noctua NH-D12L', brand: 'Noctua', price: 99, tags: ['consumer', 'server'], type: 'air', sockets: desk, heightMm: 145, ratedW: 200 },
-    { id: 'noctua-nh-l9a-am5', name: 'Noctua NH-L9a-AM5', brand: 'Noctua', price: 55, tags: ['consumer'], type: 'air', sockets: ['AM5'], heightMm: 37, ratedW: 95 },
-    { id: 'arctic-lf3-360', name: 'Arctic Liquid Freezer III 360', brand: 'Arctic', price: 119, tags: ['consumer', 'workstation'], type: 'aio', sockets: desk, heightMm: 55, radMm: 360, ratedW: 300 },
+    { id: 'noctua-nh-l9a-am5', name: 'Noctua NH-L9a-AM5', brand: 'Noctua', price: 55, tags: ['consumer'], type: 'air', sockets: ['AM5', 'AM4'], heightMm: 37, ratedW: 95 },
+    { id: 'arctic-lf3-360', name: 'Arctic Liquid Freezer III 360', brand: 'Arctic', price: 119, tags: ['consumer', 'workstation'], type: 'aio', sockets: deskAio, heightMm: 55, radMm: 360, ratedW: 300 },
     { id: 'noctua-u14s-tr5-sp6', name: 'Noctua NH-U14S TR5-SP6', brand: 'Noctua', price: 159, tags: ['workstation'], type: 'air', sockets: ['sTR5', 'SP6'], heightMm: 165, ratedW: 350 },
     { id: 'noctua-u14s-dx-4677', name: 'Noctua NH-U14S DX-4677', brand: 'Noctua', price: 139, tags: ['workstation', 'server'], type: 'air', sockets: ['LGA4677'], heightMm: 165, ratedW: 300 },
     { id: 'arctic-freezer-4u-sp5', name: 'Arctic Freezer 4U-SP5', brand: 'Arctic', price: 70, tags: ['server', 'workstation'], type: 'air', sockets: ['SP5'], heightMm: 126, ratedW: 400 },
@@ -233,7 +234,23 @@
       { id: 'seagate-exos-x24-24tb-sas', qty: 2 }, { id: 'corsair-sf750', qty: 1 }, { id: 'cm-nr200p', qty: 1 }, { id: 'noctua-nh-d15-g2', qty: 1 } ] },
   ];
 
-  const api = { parts, presets, pricesAsOf: PRICES_AS_OF };
+  // Merge bulk-imported parts (src/catalog.imported.json). Hand-curated parts win on name clashes.
+  const norm = (n) => n.toLowerCase().replace(/[^a-z0-9]/g, '');
+  function mergeImported(list) {
+    const names = new Set(parts.map((p) => norm(p.name)));
+    const ids = new Set(parts.map((p) => p.id));
+    let added = 0;
+    for (const p of list || []) {
+      if (ids.has(p.id) || names.has(norm(p.name))) continue;
+      ids.add(p.id); names.add(norm(p.name)); parts.push(p); added++;
+    }
+    return added;
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    try { mergeImported(require('./catalog.imported.json')); } catch (e) { /* no import yet */ }
+  }
+
+  const api = { parts, presets, pricesAsOf: PRICES_AS_OF, mergeImported };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.SLOTWISE_CATALOG = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
