@@ -1,0 +1,11 @@
+{
+  "id": "passive-1u-sp3",
+  "name": "1U passive heatsink (SP3)",
+  "brand": "Generic",
+  "price": 50,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["SP3"],
+  "heightMm": 27,
+  "ratedW": 200
+}

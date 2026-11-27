@@ -1,0 +1,16 @@
+{
+  "id": "broadcom-9500-16i",
+  "name": "Broadcom HBA 9500-16i (tri-mode)",
+  "brand": "Broadcom",
+  "price": 650,
+  "tags": ["server", "workstation"],
+  "kind": "HBA",
+  "gen": 4,
+  "lanes": 8,
+  "size": 8,
+  "sasPorts": 16,
+  "nvmePorts": 4,
+  "watts": 12,
+  "widthSlots": 1,
+  "lowProfile": true
+}

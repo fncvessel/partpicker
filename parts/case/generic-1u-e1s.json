@@ -1,0 +1,18 @@
+{
+  "id": "generic-1u-e1s",
+  "name": "1U EDSFF chassis (16× E1.S)",
+  "brand": "Generic",
+  "price": 1800,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 1,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 27,
+  "radMm": 0,
+  "slots": 2,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "e1s": 16 }
+}

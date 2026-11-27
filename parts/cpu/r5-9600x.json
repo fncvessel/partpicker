@@ -1,0 +1,23 @@
+{
+  "id": "r5-9600x",
+  "name": "AMD Ryzen 5 9600X",
+  "brand": "AMD",
+  "price": 169,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "socket": "AM5",
+  "platform": "am5",
+  "cores": 6,
+  "threads": 12,
+  "powerW": 88,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 5600,
+  "maxMemGB": 256,
+  "lanes": 24,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "noctua-u12s-dx-4677",
+  "name": "Noctua NH-U12S DX-4677",
+  "brand": "Noctua",
+  "price": 109,
+  "tags": ["server", "workstation"],
+  "type": "air",
+  "sockets": ["LGA4677"],
+  "heightMm": 158,
+  "ratedW": 250
+}

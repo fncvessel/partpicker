@@ -1,0 +1,32 @@
+{
+  "id": "asrock-rack-genoad8x",
+  "name": "ASRock Rack GENOAD8X-2T/BCM",
+  "brand": "ASRock Rack",
+  "price": 899,
+  "tags": ["server"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 70,
+  "socket": "SP5",
+  "platforms": ["epyc-9004", "epyc-9005"],
+  "chipset": "SoC",
+  "formFactor": "ATX",
+  "dimmSlots": 8,
+  "memChannels": 12,
+  "maxMemGB": 768,
+  "pcie": [
+    { "n": 4, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 8, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 5, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 4,
+  "nvmePorts": 4,
+  "slotPositions": 7,
+  "eps8": 2
+}

@@ -1,0 +1,14 @@
+{
+  "id": "samsung-990-pro-2tb",
+  "name": "Samsung 990 Pro 2 TB",
+  "brand": "Samsung",
+  "price": 409,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "iface": "m2",
+  "form": "M.2 2280",
+  "gen": 4,
+  "tb": 2,
+  "watts": 8,
+  "media": "SSD"
+}

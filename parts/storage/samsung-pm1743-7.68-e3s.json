@@ -1,0 +1,13 @@
+{
+  "id": "samsung-pm1743-7.68-e3s",
+  "name": "Samsung PM1743 7.68 TB E3.S (Gen5)",
+  "brand": "Samsung",
+  "price": 2000,
+  "tags": ["server"],
+  "iface": "e3s",
+  "form": "E3.S",
+  "gen": 5,
+  "tb": 7.68,
+  "watts": 25,
+  "media": "SSD"
+}

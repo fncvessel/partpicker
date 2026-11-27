@@ -1,0 +1,13 @@
+{
+  "id": "solidigm-p5520-7.68",
+  "name": "Solidigm D7-P5520 7.68 TB U.2",
+  "brand": "Solidigm",
+  "price": 800,
+  "tags": ["server"],
+  "iface": "u2",
+  "form": "2.5\"",
+  "gen": 4,
+  "tb": 7.68,
+  "watts": 20,
+  "media": "SSD"
+}

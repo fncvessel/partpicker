@@ -1,0 +1,18 @@
+{
+  "id": "sm-cse-826",
+  "name": "Supermicro CSE-826 (2U, 12× 3.5\" hot-swap)",
+  "brand": "Supermicro",
+  "price": 1100,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 2,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 64,
+  "radMm": 0,
+  "slots": 7,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "3.5": 12, "2.5": 2 }
+}

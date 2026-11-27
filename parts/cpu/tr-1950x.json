@@ -1,0 +1,22 @@
+{
+  "id": "tr-1950x",
+  "name": "AMD Ryzen Threadripper 1950X",
+  "brand": "AMD",
+  "price": 110,
+  "tags": ["workstation"],
+  "memTypes": ["DDR4"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "maxSockets": 1,
+  "socket": "TR4",
+  "platform": "tr-1000-2000",
+  "memChannels": 4,
+  "memSpeed": 2666,
+  "maxMemGB": 512,
+  "lanes": 64,
+  "pcieGen": 3,
+  "cores": 16,
+  "threads": 32,
+  "powerW": 180
+}

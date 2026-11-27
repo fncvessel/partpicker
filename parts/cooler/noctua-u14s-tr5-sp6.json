@@ -1,0 +1,11 @@
+{
+  "id": "noctua-u14s-tr5-sp6",
+  "name": "Noctua NH-U14S TR5-SP6",
+  "brand": "Noctua",
+  "price": 159,
+  "tags": ["workstation"],
+  "type": "air",
+  "sockets": ["sTR5", "SP6"],
+  "heightMm": 165,
+  "ratedW": 350
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtx-4060",
+  "name": "GeForce RTX 4060 (dual-fan)",
+  "brand": "Generic",
+  "price": 399,
+  "tags": ["consumer"],
+  "vramGB": 8,
+  "gen": 4,
+  "lanes": 8,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 240,
+  "powerW": 115,
+  "conn": { "pcie8": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

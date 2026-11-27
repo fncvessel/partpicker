@@ -1,0 +1,23 @@
+{
+  "id": "r7-9800x3d",
+  "name": "AMD Ryzen 7 9800X3D",
+  "brand": "AMD",
+  "price": 399,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "socket": "AM5",
+  "platform": "am5",
+  "cores": 8,
+  "threads": 16,
+  "powerW": 162,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 5600,
+  "maxMemGB": 256,
+  "lanes": 24,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}

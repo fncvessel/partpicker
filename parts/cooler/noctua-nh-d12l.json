@@ -1,0 +1,11 @@
+{
+  "id": "noctua-nh-d12l",
+  "name": "Noctua NH-D12L",
+  "brand": "Noctua",
+  "price": 99,
+  "tags": ["consumer", "server"],
+  "type": "air",
+  "sockets": ["AM5", "AM4", "LGA1700", "LGA1851", "LGA1200"],
+  "heightMm": 145,
+  "ratedW": 200
+}

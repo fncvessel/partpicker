@@ -1,0 +1,22 @@
+{
+  "id": "epyc-4344p",
+  "name": "AMD EPYC 4344P",
+  "brand": "AMD",
+  "price": 329,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": true,
+  "socket": "AM5",
+  "platform": "am5",
+  "memChannels": 2,
+  "memSpeed": 5200,
+  "maxMemGB": 192,
+  "lanes": 28,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 8,
+  "threads": 16,
+  "powerW": 88
+}

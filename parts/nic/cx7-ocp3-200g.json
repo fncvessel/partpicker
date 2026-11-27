@@ -1,0 +1,16 @@
+{
+  "id": "cx7-ocp3-200g",
+  "name": "NVIDIA ConnectX-7 2×200G (OCP 3.0)",
+  "brand": "NVIDIA",
+  "price": 2400,
+  "tags": ["server"],
+  "form": "ocp3",
+  "speedG": 200,
+  "ports": 2,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "watts": 25,
+  "widthSlots": 0,
+  "lowProfile": true
+}

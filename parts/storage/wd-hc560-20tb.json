@@ -1,0 +1,13 @@
+{
+  "id": "wd-hc560-20tb",
+  "name": "WD Ultrastar DC HC560 20 TB SATA",
+  "brand": "WD",
+  "price": 400,
+  "tags": ["server"],
+  "iface": "sata",
+  "form": "3.5\"",
+  "gen": 0,
+  "tb": 20,
+  "watts": 9,
+  "media": "HDD"
+}

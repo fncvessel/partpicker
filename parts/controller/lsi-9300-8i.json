@@ -1,0 +1,16 @@
+{
+  "id": "lsi-9300-8i",
+  "name": "LSI SAS 9300-8i (IT mode)",
+  "brand": "LSI",
+  "price": 90,
+  "tags": ["server"],
+  "kind": "HBA",
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "sasPorts": 8,
+  "nvmePorts": 0,
+  "watts": 13,
+  "widthSlots": 1,
+  "lowProfile": true
+}

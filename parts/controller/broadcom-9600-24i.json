@@ -1,0 +1,16 @@
+{
+  "id": "broadcom-9600-24i",
+  "name": "Broadcom HBA 9600-24i (tri-mode, Gen5)",
+  "brand": "Broadcom",
+  "price": 1300,
+  "tags": ["server"],
+  "kind": "HBA",
+  "gen": 5,
+  "lanes": 8,
+  "size": 8,
+  "sasPorts": 24,
+  "nvmePorts": 6,
+  "watts": 15,
+  "widthSlots": 1,
+  "lowProfile": false
+}

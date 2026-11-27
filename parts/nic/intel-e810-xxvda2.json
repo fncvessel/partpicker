@@ -1,0 +1,16 @@
+{
+  "id": "intel-e810-xxvda2",
+  "name": "Intel E810-XXVDA2 25G SFP28",
+  "brand": "Intel",
+  "price": 350,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 25,
+  "ports": 2,
+  "gen": 4,
+  "lanes": 8,
+  "size": 8,
+  "watts": 16,
+  "widthSlots": 1,
+  "lowProfile": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "micron-ddr5-6400-96-rdimm",
+  "name": "Micron DDR5-6400 96 GB RDIMM",
+  "brand": "Micron",
+  "price": 3900,
+  "priceChecked": true,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 96,
+  "sticks": 1,
+  "speed": 6400
+}

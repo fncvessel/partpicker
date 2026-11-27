@@ -1,0 +1,23 @@
+{
+  "id": "r9-9950x",
+  "name": "AMD Ryzen 9 9950X",
+  "brand": "AMD",
+  "price": 489,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "socket": "AM5",
+  "platform": "am5",
+  "cores": 16,
+  "threads": 32,
+  "powerW": 230,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 5600,
+  "maxMemGB": 256,
+  "lanes": 24,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}

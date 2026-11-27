@@ -1,0 +1,13 @@
+{
+  "id": "kingston-ddr5-4800-32-ecc",
+  "name": "Kingston Server Premier DDR5-4800 32 GB ECC UDIMM",
+  "brand": "Kingston",
+  "price": 680,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 4800
+}

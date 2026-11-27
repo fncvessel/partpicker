@@ -1,0 +1,11 @@
+{
+  "id": "noctua-u9-tr4-sp3",
+  "name": "Noctua NH-U9 TR4-SP3",
+  "brand": "Noctua",
+  "price": 89,
+  "tags": ["server"],
+  "type": "air",
+  "sockets": ["SP3", "TR4", "sTRX4", "sWRX8"],
+  "heightMm": 125,
+  "ratedW": 225
+}

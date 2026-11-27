@@ -1,0 +1,32 @@
+{
+  "id": "sm-h12ssl-i",
+  "name": "Supermicro H12SSL-i",
+  "brand": "Supermicro",
+  "price": 649,
+  "tags": ["server"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "memModules": ["RDIMM", "LRDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 55,
+  "socket": "SP3",
+  "platforms": ["epyc-7003"],
+  "chipset": "SoC",
+  "formFactor": "ATX",
+  "dimmSlots": 8,
+  "memChannels": 8,
+  "maxMemGB": 2048,
+  "pcie": [
+    { "n": 5, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 },
+    { "n": 2, "size": 8, "lanes": 8, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 4, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 8,
+  "nvmePorts": 2,
+  "slotPositions": 7,
+  "eps8": 2
+}

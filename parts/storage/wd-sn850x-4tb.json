@@ -1,0 +1,14 @@
+{
+  "id": "wd-sn850x-4tb",
+  "name": "WD Black SN850X 4 TB",
+  "brand": "WD",
+  "price": 789,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "iface": "m2",
+  "form": "M.2 2280",
+  "gen": 4,
+  "tb": 4,
+  "watts": 8,
+  "media": "SSD"
+}

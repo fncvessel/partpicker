@@ -1,0 +1,13 @@
+{
+  "id": "seagate-exos-x20-20tb",
+  "name": "Seagate Exos X20 20 TB SATA",
+  "brand": "Seagate",
+  "price": 349,
+  "tags": ["server"],
+  "iface": "sata",
+  "form": "3.5\"",
+  "gen": 0,
+  "tb": 20,
+  "watts": 9,
+  "media": "HDD"
+}

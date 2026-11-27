@@ -1,0 +1,16 @@
+{
+  "id": "fractal-north",
+  "name": "Fractal Design North",
+  "brand": "Fractal",
+  "price": 139,
+  "tags": ["consumer"],
+  "kind": "tower",
+  "boards": ["ITX", "mATX", "ATX"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 355,
+  "coolerMaxMm": 170,
+  "radMm": 360,
+  "slots": 7,
+  "airflow": "standard",
+  "bays": { "3.5": 2, "2.5": 2 }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "asrock-trx40-creator",
+  "name": "ASRock TRX40 Creator",
+  "brand": "ASRock",
+  "price": 330,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "ecc": true,
+  "ocp": 0,
+  "nvmePorts": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "watts": 60,
+  "eps8": 2,
+  "socket": "sTRX4",
+  "platforms": ["tr-3000"],
+  "chipset": "TRX40",
+  "memModules": ["UDIMM"],
+  "dimmSlots": 8,
+  "memChannels": 4,
+  "maxMemGB": 256,
+  "chipsetLanes": 16,
+  "formFactor": "ATX",
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 8, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [{ "n": 1, "gen": 4, "cpu": 1, "sizes": ["2280"] }, { "n": 1, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 8,
+  "slotPositions": 7
+}

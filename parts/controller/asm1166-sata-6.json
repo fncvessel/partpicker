@@ -1,0 +1,16 @@
+{
+  "id": "asm1166-sata-6",
+  "name": "6-port SATA card (ASM1166)",
+  "brand": "Generic",
+  "price": 35,
+  "tags": ["consumer"],
+  "kind": "SATA",
+  "gen": 3,
+  "lanes": 2,
+  "size": 4,
+  "sataOnlyPorts": 6,
+  "nvmePorts": 0,
+  "watts": 3,
+  "widthSlots": 1,
+  "lowProfile": true
+}

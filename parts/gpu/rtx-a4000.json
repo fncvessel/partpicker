@@ -1,0 +1,17 @@
+{
+  "id": "rtx-a4000",
+  "name": "NVIDIA RTX A4000",
+  "brand": "NVIDIA",
+  "price": 1000,
+  "tags": ["workstation"],
+  "vramGB": 16,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 241,
+  "powerW": 140,
+  "conn": { "pcie8": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

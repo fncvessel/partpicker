@@ -1,0 +1,13 @@
+{
+  "id": "kingston-ddr4-3200-2x16",
+  "name": "Kingston Fury Beast DDR4-3200 32 GB (2×16)",
+  "brand": "Kingston",
+  "price": 220,
+  "tags": ["consumer"],
+  "type": "DDR4",
+  "module": "UDIMM",
+  "ecc": false,
+  "gb": 16,
+  "sticks": 2,
+  "speed": 3200
+}

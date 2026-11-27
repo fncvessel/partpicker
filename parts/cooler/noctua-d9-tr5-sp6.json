@@ -1,0 +1,11 @@
+{
+  "id": "noctua-d9-tr5-sp6",
+  "name": "Noctua NH-D9 TR5-SP6 4U",
+  "brand": "Noctua",
+  "price": 119,
+  "tags": ["server", "workstation"],
+  "type": "air",
+  "sockets": ["sTR5", "SP6"],
+  "heightMm": 126,
+  "ratedW": 300
+}

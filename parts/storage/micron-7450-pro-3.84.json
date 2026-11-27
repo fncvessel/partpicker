@@ -1,0 +1,13 @@
+{
+  "id": "micron-7450-pro-3.84",
+  "name": "Micron 7450 PRO 3.84 TB U.3",
+  "brand": "Micron",
+  "price": 420,
+  "tags": ["server", "workstation"],
+  "iface": "u3",
+  "form": "2.5\"",
+  "gen": 4,
+  "tb": 3.84,
+  "watts": 14,
+  "media": "SSD"
+}

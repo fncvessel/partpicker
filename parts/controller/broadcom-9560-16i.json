@@ -1,0 +1,16 @@
+{
+  "id": "broadcom-9560-16i",
+  "name": "Broadcom MegaRAID 9560-16i",
+  "brand": "Broadcom",
+  "price": 1100,
+  "tags": ["server"],
+  "kind": "RAID",
+  "gen": 4,
+  "lanes": 8,
+  "size": 8,
+  "sasPorts": 16,
+  "nvmePorts": 4,
+  "watts": 16,
+  "widthSlots": 1,
+  "lowProfile": true
+}

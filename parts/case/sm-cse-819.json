@@ -1,0 +1,18 @@
+{
+  "id": "sm-cse-819",
+  "name": "Supermicro CSE-819 (1U, 4× 3.5\")",
+  "brand": "Supermicro",
+  "price": 700,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 1,
+  "boards": ["mATX", "ATX", "E-ATX"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 27,
+  "radMm": 0,
+  "slots": 2,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "3.5": 4 }
+}

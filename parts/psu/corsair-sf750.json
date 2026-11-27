@@ -1,0 +1,12 @@
+{
+  "id": "corsair-sf750",
+  "name": "Corsair SF750",
+  "brand": "Corsair",
+  "price": 179,
+  "tags": ["consumer"],
+  "form": "SFX",
+  "watts": 750,
+  "efficiency": "Platinum",
+  "redundant": false,
+  "conn": { "eps8": 2, "pcie8": 4, "h12v": 0 }
+}

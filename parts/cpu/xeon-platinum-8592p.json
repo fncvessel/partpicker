@@ -1,0 +1,22 @@
+{
+  "id": "xeon-platinum-8592p",
+  "name": "Intel Xeon Platinum 8592+",
+  "brand": "Intel",
+  "price": 11600,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-sp-5",
+  "memChannels": 8,
+  "memSpeed": 5600,
+  "maxMemGB": 4096,
+  "lanes": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "cores": 64,
+  "threads": 128,
+  "powerW": 350
+}

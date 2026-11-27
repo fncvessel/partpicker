@@ -1,0 +1,18 @@
+{
+  "id": "rtx-5090-fe",
+  "name": "NVIDIA GeForce RTX 5090 Founders Edition",
+  "brand": "NVIDIA",
+  "price": 6919,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "vramGB": 32,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 304,
+  "powerW": 575,
+  "conn": { "h12v": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

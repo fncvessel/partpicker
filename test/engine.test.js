@@ -86,3 +86,13 @@ test('server lineups: SP6 build is clean, 1P-only parts refuse 2S boards', () =>
   assert.ok(rules(ev([{ id: 'xeon-w9-3595x', qty: 1 }, { id: 'sm-x13sei-f', qty: 1 }]), 'error').includes('cpu-platform'));
   assert.strictEqual(parts.find((p) => p.id === 'epyc-9754s').threads, 128);
 });
+
+test('DDR4 Threadripper: TRX40 and WRX80 builds are clean, generations stay apart', () => {
+  const trx = ev([{ id: 'tr-3970x', qty: 1 }, { id: 'asrock-trx40-creator', qty: 1 }, { id: 'kingston-ddr4-3200-32-ecc', qty: 4 }, { id: 'noctua-u14s-tr4-sp3', qty: 1 },
+    { id: 'rtx-a4000', qty: 1 }, { id: 'samsung-990-pro-2tb', qty: 1 }, { id: 'seasonic-focus-gx-1000', qty: 1 }, { id: 'fractal-define-7-xl', qty: 1 }]);
+  assert.deepStrictEqual(trx.issues.filter((i) => i.level === 'error'), []);
+  const wrx = ev([{ id: 'tr-pro-5975wx', qty: 1 }, { id: 'asus-wrx80e-sage', qty: 1 }, { id: 'samsung-ddr4-3200-64-rdimm', qty: 8 }, { id: 'arctic-freezer-4u-sp3', qty: 1 }]);
+  assert.deepStrictEqual(wrx.issues.filter((i) => i.level === 'error'), []);
+  assert.ok(rules(ev([{ id: 'tr-3970x', qty: 1 }, { id: 'asus-zenith-extreme', qty: 1 }]), 'error').includes('cpu-socket'));
+  assert.ok(rules(ev([{ id: 'tr-3970x', qty: 1 }, { id: 'asrock-trx40-creator', qty: 1 }, { id: 'samsung-ddr4-3200-32-rdimm', qty: 4 }]), 'error').includes('mem-module'));
+});

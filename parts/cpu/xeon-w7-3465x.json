@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w7-3465x",
+  "name": "Intel Xeon w7-3465X",
+  "brand": "Intel",
+  "price": 3889,
+  "tags": ["workstation"],
+  "socket": "LGA4677",
+  "platform": "xeon-w-3400",
+  "cores": 28,
+  "threads": 56,
+  "powerW": 300,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 8,
+  "memSpeed": 4800,
+  "maxMemGB": 4096,
+  "lanes": 112,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": false,
+  "ecc": true
+}

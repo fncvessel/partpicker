@@ -1,0 +1,16 @@
+{
+  "id": "asus-hyper-m2-gen5",
+  "name": "ASUS Hyper M.2 x16 Gen5 (4× M.2)",
+  "brand": "ASUS",
+  "price": 80,
+  "tags": ["consumer", "workstation"],
+  "kind": "M.2 adapter",
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "m2Slots": 4,
+  "needsBifurcation": true,
+  "watts": 6,
+  "widthSlots": 1,
+  "lowProfile": false
+}

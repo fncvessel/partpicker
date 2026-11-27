@@ -1,0 +1,12 @@
+{
+  "id": "corsair-ax1600i",
+  "name": "Corsair AX1600i",
+  "brand": "Corsair",
+  "price": 599,
+  "tags": ["workstation"],
+  "form": "ATX",
+  "watts": 1600,
+  "efficiency": "Titanium",
+  "redundant": false,
+  "conn": { "eps8": 2, "pcie8": 10, "h12v": 0 }
+}

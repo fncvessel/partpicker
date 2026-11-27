@@ -1,0 +1,17 @@
+{
+  "id": "rtx-pro-4500",
+  "name": "NVIDIA RTX PRO 4500 Blackwell",
+  "brand": "NVIDIA",
+  "price": 3000,
+  "tags": ["workstation"],
+  "vramGB": 32,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 200,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

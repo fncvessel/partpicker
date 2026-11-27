@@ -1,0 +1,18 @@
+{
+  "id": "rtx-5080-fe",
+  "name": "NVIDIA GeForce RTX 5080 Founders Edition",
+  "brand": "NVIDIA",
+  "price": 1999,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "vramGB": 16,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 304,
+  "powerW": 360,
+  "conn": { "h12v": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

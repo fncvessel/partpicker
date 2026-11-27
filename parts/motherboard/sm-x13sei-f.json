@@ -1,0 +1,32 @@
+{
+  "id": "sm-x13sei-f",
+  "name": "Supermicro X13SEI-F",
+  "brand": "Supermicro",
+  "price": 699,
+  "tags": ["server"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 70,
+  "socket": "LGA4677",
+  "platforms": ["xeon-sp-4", "xeon-sp-5"],
+  "chipset": "C741",
+  "formFactor": "ATX",
+  "dimmSlots": 8,
+  "memChannels": 8,
+  "maxMemGB": 2048,
+  "pcie": [
+    { "n": 4, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 8, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 3, "cpu": "pch", "sizes": ["2280", "22110"] }],
+  "sata": 10,
+  "nvmePorts": 2,
+  "slotPositions": 7,
+  "eps8": 2
+}

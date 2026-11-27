@@ -1,0 +1,11 @@
+{
+  "id": "noctua-d9-dx-4677",
+  "name": "Noctua NH-D9 DX-4677 4U",
+  "brand": "Noctua",
+  "price": 119,
+  "tags": ["server", "workstation"],
+  "type": "air",
+  "sockets": ["LGA4677"],
+  "heightMm": 126,
+  "ratedW": 270
+}

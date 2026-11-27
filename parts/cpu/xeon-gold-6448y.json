@@ -1,0 +1,22 @@
+{
+  "id": "xeon-gold-6448y",
+  "name": "Intel Xeon Gold 6448Y",
+  "brand": "Intel",
+  "price": 3583,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-sp-4",
+  "memChannels": 8,
+  "memSpeed": 4800,
+  "maxMemGB": 4096,
+  "lanes": 80,
+  "pcieGen": 5,
+  "maxSockets": 4,
+  "cores": 32,
+  "threads": 64,
+  "powerW": 225
+}

@@ -1,0 +1,12 @@
+{
+  "id": "arctic-lf3-360",
+  "name": "Arctic Liquid Freezer III 360",
+  "brand": "Arctic",
+  "price": 119,
+  "tags": ["consumer", "workstation"],
+  "type": "aio",
+  "sockets": ["AM5", "AM4", "LGA1700", "LGA1851"],
+  "heightMm": 55,
+  "radMm": 360,
+  "ratedW": 300
+}

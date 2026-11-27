@@ -1,0 +1,16 @@
+{
+  "id": "cx7-400g",
+  "name": "NVIDIA ConnectX-7 1×400G",
+  "brand": "NVIDIA",
+  "price": 2200,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 400,
+  "ports": 1,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "watts": 25,
+  "widthSlots": 1,
+  "lowProfile": true
+}

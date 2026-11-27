@@ -1,0 +1,17 @@
+{
+  "id": "sliger-cx4170a",
+  "name": "Sliger CX4170a (4U, long GPU)",
+  "brand": "Sliger",
+  "price": 299,
+  "tags": ["server", "workstation"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["mATX", "ATX", "CEB", "E-ATX"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 360,
+  "coolerMaxMm": 160,
+  "radMm": 360,
+  "slots": 8,
+  "airflow": "server",
+  "bays": { "3.5": 2, "2.5": 4 }
+}

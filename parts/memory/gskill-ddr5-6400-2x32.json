@@ -1,0 +1,13 @@
+{
+  "id": "gskill-ddr5-6400-2x32",
+  "name": "G.Skill Trident Z5 DDR5-6400 64 GB (2×32)",
+  "brand": "G.Skill",
+  "price": 1190,
+  "tags": ["consumer", "workstation"],
+  "type": "DDR5",
+  "module": "UDIMM",
+  "ecc": false,
+  "gb": 32,
+  "sticks": 2,
+  "speed": 6400
+}

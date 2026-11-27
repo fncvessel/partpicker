@@ -1,0 +1,13 @@
+{
+  "id": "wd-hc580-24tb-sas",
+  "name": "WD Ultrastar DC HC580 24 TB SAS",
+  "brand": "WD",
+  "price": 480,
+  "tags": ["server"],
+  "iface": "sas",
+  "form": "3.5\"",
+  "gen": 0,
+  "tb": 24,
+  "watts": 10,
+  "media": "HDD"
+}

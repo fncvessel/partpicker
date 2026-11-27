@@ -1,0 +1,22 @@
+{
+  "id": "tr-pro-5945wx",
+  "name": "AMD Ryzen Threadripper PRO 5945WX",
+  "brand": "AMD",
+  "price": 700,
+  "tags": ["workstation"],
+  "memTypes": ["DDR4"],
+  "memModules": ["RDIMM", "LRDIMM", "UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "maxSockets": 1,
+  "socket": "sWRX8",
+  "platform": "tr-pro-5000",
+  "memChannels": 8,
+  "memSpeed": 3200,
+  "maxMemGB": 2048,
+  "lanes": 128,
+  "pcieGen": 4,
+  "cores": 12,
+  "threads": 24,
+  "powerW": 280
+}

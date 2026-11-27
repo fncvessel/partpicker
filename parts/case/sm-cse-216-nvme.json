@@ -1,0 +1,18 @@
+{
+  "id": "sm-cse-216-nvme",
+  "name": "Supermicro CSE-216 (2U, 24× 2.5\" NVMe/SAS)",
+  "brand": "Supermicro",
+  "price": 1500,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 2,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 64,
+  "radMm": 0,
+  "slots": 7,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "nvme": 24 }
+}

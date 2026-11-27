@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9755",
+  "name": "AMD EPYC 9755",
+  "brand": "AMD",
+  "price": 12984,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP5",
+  "platform": "epyc-9005",
+  "memChannels": 12,
+  "memSpeed": 6000,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "cores": 128,
+  "threads": 256,
+  "powerW": 500
+}

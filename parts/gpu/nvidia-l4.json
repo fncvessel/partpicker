@@ -1,0 +1,17 @@
+{
+  "id": "nvidia-l4",
+  "name": "NVIDIA L4",
+  "brand": "NVIDIA",
+  "price": 2500,
+  "tags": ["server"],
+  "vramGB": 24,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 169,
+  "powerW": 72,
+  "conn": {},
+  "cooling": "passive",
+  "lowProfile": true
+}

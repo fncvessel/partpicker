@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9555",
+  "name": "AMD EPYC 9555",
+  "brand": "AMD",
+  "price": 9826,
+  "tags": ["server"],
+  "socket": "SP5",
+  "platform": "epyc-9005",
+  "cores": 64,
+  "threads": 128,
+  "powerW": 360,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 12,
+  "memSpeed": 6000,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "igpu": false,
+  "ecc": true
+}

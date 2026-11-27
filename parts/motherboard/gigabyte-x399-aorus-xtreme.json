@@ -1,0 +1,32 @@
+{
+  "id": "gigabyte-x399-aorus-xtreme",
+  "name": "Gigabyte X399 Aorus Xtreme",
+  "brand": "Gigabyte",
+  "price": 230,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "ecc": true,
+  "ocp": 0,
+  "nvmePorts": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "watts": 60,
+  "eps8": 2,
+  "socket": "TR4",
+  "platforms": ["tr-1000-2000"],
+  "chipset": "X399",
+  "memModules": ["UDIMM"],
+  "dimmSlots": 8,
+  "memChannels": 4,
+  "maxMemGB": 512,
+  "chipsetLanes": 8,
+  "formFactor": "E-ATX",
+  "pcie": [
+    { "n": 2, "size": 16, "lanes": 16, "gen": 3, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 8, "gen": 3, "cpu": 1 }
+  ],
+  "m2": [{ "n": 3, "gen": 3, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 6,
+  "slotPositions": 7
+}

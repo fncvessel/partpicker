@@ -21,7 +21,7 @@
 
   const PLATFORM_NAMES = {
     'am5': 'Ryzen / EPYC 4004 (AM5)', 'am4': 'Ryzen (AM4)', 'comet-rocket': 'Core 10th/11th gen', 'arrow-lake': 'Core Ultra 200S', 'core-12-14': 'Core 12th–14th gen', 'xeon-e-2400': 'Xeon E-2400',
-    'tr-7000': 'Threadripper 7000', 'tr-9000': 'Threadripper 9000', 'tr-pro-7000': 'Threadripper PRO 7000WX', 'tr-pro-9000': 'Threadripper PRO 9000WX',
+    'tr-7000': 'Threadripper 7000', 'tr-9000': 'Threadripper 9000', 'tr-pro-7000': 'Threadripper PRO 7000WX', 'tr-pro-9000': 'Threadripper PRO 9000WX', 'tr-1000-2000': 'Threadripper 1000/2000', 'tr-3000': 'Threadripper 3000', 'tr-pro-3000': 'Threadripper PRO 3000WX', 'tr-pro-5000': 'Threadripper PRO 5000WX',
     'xeon-w-2400': 'Xeon W-2400', 'xeon-w-3400': 'Xeon W-3400', 'xeon-sp-4': '4th gen Xeon Scalable', 'xeon-sp-5': '5th gen Xeon Scalable',
     'epyc-9004': 'EPYC 9004', 'epyc-8004': 'EPYC 8004', 'xeon-w-3500': 'Xeon W-3500', 'epyc-9005': 'EPYC 9005', 'epyc-7003': 'EPYC 7003',
   };

@@ -1,0 +1,18 @@
+{
+  "id": "intel-arc-b580",
+  "name": "Intel Arc B580 Limited Edition",
+  "brand": "Intel",
+  "price": 329,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "vramGB": 12,
+  "gen": 4,
+  "lanes": 8,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 272,
+  "powerW": 190,
+  "conn": { "pcie8": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

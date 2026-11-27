@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w5-2455x",
+  "name": "Intel Xeon w5-2455X",
+  "brand": "Intel",
+  "price": 1039,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-2400",
+  "memChannels": 4,
+  "memSpeed": 4800,
+  "maxMemGB": 2048,
+  "lanes": 64,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 12,
+  "threads": 24,
+  "powerW": 200
+}

@@ -5,7 +5,10 @@
   "description": "PC build planner for consumer, workstation and server hardware with a rules-based compatibility engine.",
   "scripts": {
     "build": "node build.js",
-    "test": "node --test test/*.test.js"
+    "validate": "node scripts/validate-parts.js",
+    "format": "node scripts/validate-parts.js --fix",
+    "test": "node scripts/validate-parts.js && node --test test/*.test.js",
+    "import": "node scripts/import-dataset.js"
   },
   "license": "UNLICENSED"
 }

@@ -1,0 +1,17 @@
+{
+  "id": "amd-mi210",
+  "name": "AMD Instinct MI210",
+  "brand": "AMD",
+  "price": 9000,
+  "tags": ["server"],
+  "vramGB": 64,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "pcie8": 1 },
+  "cooling": "passive",
+  "lowProfile": false
+}

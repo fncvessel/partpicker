@@ -1,0 +1,17 @@
+{
+  "id": "rtx-4000-sff-ada",
+  "name": "NVIDIA RTX 4000 SFF Ada",
+  "brand": "NVIDIA",
+  "price": 1250,
+  "tags": ["workstation", "server"],
+  "vramGB": 20,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 168,
+  "powerW": 70,
+  "conn": {},
+  "cooling": "blower",
+  "lowProfile": true
+}

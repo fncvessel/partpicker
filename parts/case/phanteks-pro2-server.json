@@ -1,0 +1,16 @@
+{
+  "id": "phanteks-pro2-server",
+  "name": "Phanteks Enthoo Pro 2 Server Edition",
+  "brand": "Phanteks",
+  "price": 179,
+  "tags": ["workstation", "server"],
+  "kind": "tower",
+  "boards": ["ITX", "mATX", "ATX", "CEB", "E-ATX", "EEB"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 503,
+  "coolerMaxMm": 195,
+  "radMm": 420,
+  "slots": 8,
+  "airflow": "standard",
+  "bays": { "3.5": 12, "2.5": 11 }
+}

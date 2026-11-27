@@ -1,0 +1,18 @@
+{
+  "id": "rtx-pro-6000-ws",
+  "name": "NVIDIA RTX PRO 6000 Blackwell Workstation",
+  "brand": "NVIDIA",
+  "price": 16399,
+  "priceChecked": true,
+  "tags": ["workstation"],
+  "vramGB": 96,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 304,
+  "powerW": 600,
+  "conn": { "h12v": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

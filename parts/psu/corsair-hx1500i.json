@@ -1,0 +1,12 @@
+{
+  "id": "corsair-hx1500i",
+  "name": "Corsair HX1500i (ATX 3.1)",
+  "brand": "Corsair",
+  "price": 329,
+  "tags": ["workstation"],
+  "form": "ATX",
+  "watts": 1500,
+  "efficiency": "Platinum",
+  "redundant": false,
+  "conn": { "eps8": 3, "pcie8": 6, "h12v": 1 }
+}

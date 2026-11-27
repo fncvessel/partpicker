@@ -1,0 +1,35 @@
+{
+  "id": "gigabyte-trx40-aorus-master",
+  "name": "Gigabyte TRX40 Aorus Master",
+  "brand": "Gigabyte",
+  "price": 350,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "ecc": true,
+  "ocp": 0,
+  "nvmePorts": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "watts": 60,
+  "eps8": 2,
+  "socket": "sTRX4",
+  "platforms": ["tr-3000"],
+  "chipset": "TRX40",
+  "memModules": ["UDIMM"],
+  "dimmSlots": 8,
+  "memChannels": 4,
+  "maxMemGB": 256,
+  "chipsetLanes": 16,
+  "formFactor": "E-ATX",
+  "pcie": [
+    { "n": 2, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 8, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [
+    { "n": 2, "gen": 4, "cpu": 1, "sizes": ["2280", "22110"] },
+    { "n": 1, "gen": 4, "cpu": "pch", "sizes": ["2280"] }
+  ],
+  "sata": 6,
+  "slotPositions": 7
+}

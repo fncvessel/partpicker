@@ -1,0 +1,18 @@
+{
+  "id": "asus-prime-rtx-5070",
+  "name": "ASUS Prime GeForce RTX 5070",
+  "brand": "ASUS",
+  "price": 899,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "vramGB": 12,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2.5,
+  "lengthMm": 304,
+  "powerW": 250,
+  "conn": { "pcie8": 1 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

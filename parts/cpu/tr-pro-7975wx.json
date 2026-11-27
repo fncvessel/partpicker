@@ -1,0 +1,22 @@
+{
+  "id": "tr-pro-7975wx",
+  "name": "AMD Threadripper PRO 7975WX",
+  "brand": "AMD",
+  "price": 3899,
+  "tags": ["workstation"],
+  "socket": "sTR5",
+  "platform": "tr-pro-7000",
+  "cores": 32,
+  "threads": 64,
+  "powerW": 350,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 8,
+  "memSpeed": 5200,
+  "maxMemGB": 2048,
+  "lanes": 128,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": false,
+  "ecc": true
+}

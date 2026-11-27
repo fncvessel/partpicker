@@ -1,0 +1,32 @@
+{
+  "id": "sm-h13ssl-n",
+  "name": "Supermicro H13SSL-N",
+  "brand": "Supermicro",
+  "price": 699,
+  "tags": ["server"],
+  "socket": "SP5",
+  "platforms": ["epyc-9004", "epyc-9005"],
+  "chipset": "SoC",
+  "formFactor": "ATX",
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "dimmSlots": 12,
+  "memChannels": 12,
+  "maxMemGB": 3072,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 2, "size": 8, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 4, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 8,
+  "nvmePorts": 4,
+  "ocp": 0,
+  "slotPositions": 7,
+  "eps8": 2,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 70
+}

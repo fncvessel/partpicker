@@ -1,0 +1,17 @@
+{
+  "id": "rtx-2000-ada",
+  "name": "NVIDIA RTX 2000 Ada",
+  "brand": "NVIDIA",
+  "price": 800,
+  "tags": ["workstation", "server"],
+  "vramGB": 16,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 168,
+  "powerW": 70,
+  "conn": {},
+  "cooling": "blower",
+  "lowProfile": true
+}

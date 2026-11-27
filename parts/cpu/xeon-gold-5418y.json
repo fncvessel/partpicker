@@ -1,0 +1,22 @@
+{
+  "id": "xeon-gold-5418y",
+  "name": "Intel Xeon Gold 5418Y",
+  "brand": "Intel",
+  "price": 1483,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-sp-4",
+  "memChannels": 8,
+  "memSpeed": 4400,
+  "maxMemGB": 4096,
+  "lanes": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 185
+}

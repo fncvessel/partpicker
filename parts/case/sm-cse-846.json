@@ -1,0 +1,17 @@
+{
+  "id": "sm-cse-846",
+  "name": "Supermicro CSE-846 (4U, 24× 3.5\" hot-swap)",
+  "brand": "Supermicro",
+  "price": 1600,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 280,
+  "coolerMaxMm": 126,
+  "radMm": 0,
+  "slots": 7,
+  "airflow": "server",
+  "bays": { "3.5": 24 }
+}

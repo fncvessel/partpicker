@@ -1,0 +1,32 @@
+{
+  "id": "gigabyte-w790-ai-top",
+  "name": "Gigabyte W790 AI TOP",
+  "brand": "Gigabyte",
+  "price": 1099,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 70,
+  "socket": "LGA4677",
+  "platforms": ["xeon-w-2400", "xeon-w-3400", "xeon-w-3500"],
+  "chipset": "W790",
+  "formFactor": "E-ATX",
+  "dimmSlots": 8,
+  "memChannels": 8,
+  "maxMemGB": 2048,
+  "pcie": [
+    { "n": 4, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 5, "cpu": 1, "sizes": ["2280"] }, { "n": 2, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "slotPositions": 7,
+  "eps8": 2
+}

@@ -1,0 +1,11 @@
+{
+  "id": "active-4u-lga1700",
+  "name": "4U active heatsink (LGA1700/AM5)",
+  "brand": "Generic",
+  "price": 45,
+  "tags": ["server"],
+  "type": "air",
+  "sockets": ["LGA1700", "AM5", "AM4"],
+  "heightMm": 120,
+  "ratedW": 150
+}

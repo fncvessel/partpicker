@@ -1,0 +1,17 @@
+{
+  "id": "sm-cse-836",
+  "name": "Supermicro CSE-836 (3U, 16× 3.5\" hot-swap)",
+  "brand": "Supermicro",
+  "price": 1300,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 3,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 280,
+  "coolerMaxMm": 100,
+  "radMm": 0,
+  "slots": 7,
+  "airflow": "server",
+  "bays": { "3.5": 16 }
+}

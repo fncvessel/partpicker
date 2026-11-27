@@ -1,0 +1,13 @@
+{
+  "id": "kingston-ddr5-5600-16-ecc",
+  "name": "Kingston Server Premier DDR5-5600 16 GB ECC UDIMM",
+  "brand": "Kingston",
+  "price": 340,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 16,
+  "sticks": 1,
+  "speed": 5600
+}

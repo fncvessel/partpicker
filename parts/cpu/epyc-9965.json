@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9965",
+  "name": "AMD EPYC 9965",
+  "brand": "AMD",
+  "price": 14813,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP5",
+  "platform": "epyc-9005",
+  "memChannels": 12,
+  "memSpeed": 6000,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "cores": 192,
+  "threads": 384,
+  "powerW": 500
+}

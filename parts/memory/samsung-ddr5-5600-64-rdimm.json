@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr5-5600-64-rdimm",
+  "name": "Samsung DDR5-5600 64 GB RDIMM",
+  "brand": "Samsung",
+  "price": 2561,
+  "priceChecked": true,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 64,
+  "sticks": 1,
+  "speed": 5600
+}

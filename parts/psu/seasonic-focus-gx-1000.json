@@ -1,0 +1,12 @@
+{
+  "id": "seasonic-focus-gx-1000",
+  "name": "Seasonic Focus GX-1000 (ATX 3.1)",
+  "brand": "Seasonic",
+  "price": 199,
+  "tags": ["consumer", "workstation"],
+  "form": "ATX",
+  "watts": 1000,
+  "efficiency": "Gold",
+  "redundant": false,
+  "conn": { "eps8": 2, "pcie8": 4, "h12v": 1 }
+}

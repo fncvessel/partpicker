@@ -1,0 +1,16 @@
+{
+  "id": "intel-x710-t2l-ocp3",
+  "name": "Intel X710-T2L 10GBASE-T (OCP 3.0)",
+  "brand": "Intel",
+  "price": 300,
+  "tags": ["server"],
+  "form": "ocp3",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 9,
+  "widthSlots": 0,
+  "lowProfile": true
+}

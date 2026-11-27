@@ -1,0 +1,12 @@
+{
+  "id": "bequiet-dpp13-1600",
+  "name": "be quiet! Dark Power Pro 13 1600 W",
+  "brand": "be quiet!",
+  "price": 549,
+  "tags": ["workstation"],
+  "form": "ATX",
+  "watts": 1600,
+  "efficiency": "Titanium",
+  "redundant": false,
+  "conn": { "eps8": 3, "pcie8": 6, "h12v": 2 }
+}

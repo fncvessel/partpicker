@@ -1,0 +1,13 @@
+{
+  "id": "samsung-ddr5-4800-16-rdimm",
+  "name": "Samsung DDR5-4800 16 GB RDIMM",
+  "brand": "Samsung",
+  "price": 620,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 16,
+  "sticks": 1,
+  "speed": 4800
+}

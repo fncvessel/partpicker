@@ -1,0 +1,13 @@
+{
+  "id": "micron-ddr5-5600-48-rdimm",
+  "name": "Micron DDR5-5600 48 GB RDIMM",
+  "brand": "Micron",
+  "price": 1950,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 48,
+  "sticks": 1,
+  "speed": 5600
+}
