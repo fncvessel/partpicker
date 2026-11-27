@@ -9,4 +9,6 @@ const html = src('page.html')
   .replace('/*APP*/', () => src('app.js'));
 fs.mkdirSync(path.join(__dirname, 'dist'), { recursive: true });
 fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), html);
+const imported = path.join(__dirname, 'src', 'catalog.imported.json');
+if (fs.existsSync(imported)) fs.copyFileSync(imported, path.join(__dirname, 'dist', 'parts.json'));
 console.log('dist/index.html', (html.length / 1024).toFixed(1) + ' KB');

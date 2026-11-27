@@ -20,7 +20,7 @@
   ];
 
   const PLATFORM_NAMES = {
-    'am5': 'Ryzen / EPYC 4004 (AM5)', 'arrow-lake': 'Core Ultra 200S', 'core-12-14': 'Core 12th–14th gen', 'xeon-e-2400': 'Xeon E-2400',
+    'am5': 'Ryzen / EPYC 4004 (AM5)', 'am4': 'Ryzen (AM4)', 'comet-rocket': 'Core 10th/11th gen', 'arrow-lake': 'Core Ultra 200S', 'core-12-14': 'Core 12th–14th gen', 'xeon-e-2400': 'Xeon E-2400',
     'tr-7000': 'Threadripper 7000', 'tr-9000': 'Threadripper 9000', 'tr-pro-7000': 'Threadripper PRO 7000WX', 'tr-pro-9000': 'Threadripper PRO 9000WX',
     'xeon-w-2400': 'Xeon W-2400', 'xeon-w-3400': 'Xeon W-3400', 'xeon-sp-4': '4th gen Xeon Scalable', 'xeon-sp-5': '5th gen Xeon Scalable',
     'epyc-9004': 'EPYC 9004', 'epyc-9005': 'EPYC 9005', 'epyc-7003': 'EPYC 7003',
@@ -78,7 +78,7 @@
     const cooler = coolerItems[0] && coolerItems[0].part;
     const coolerQty = qtyOf(coolerItems);
 
-    const stats = { price: sum(items, (x) => (x.part.price || 0) * x.qty), cores: cpu ? cpu.cores * cpuQty : 0, threads: cpu ? cpu.threads * cpuQty : 0 };
+    const stats = { price: sum(items, (x) => (x.part.price || 0) * x.qty), cores: cpu ? cpu.cores * cpuQty : 0, threads: cpu && cpu.threads ? cpu.threads * cpuQty : null };
 
     // ---------- one-of-a-kind parts ----------
     if (boardItems.length > 1 || qtyOf(boardItems) > 1) add('error', 'one-board', 'A build has one motherboard. Remove the extra.', boardItems.map((x) => x.part.id));
@@ -231,7 +231,7 @@
       if (width > chassis.slots) add('error', 'case-slots', `Cards need ${width} expansion slot openings; ${chassis.name} has ${chassis.slots}.`, [chassis.id]);
       for (const c of uniq(cards.map((c) => c.part))) {
         if (chassis.lowProfileOnly && !c.lowProfile) add('error', 'case-lowprofile', `${chassis.name} only takes low-profile cards; ${c.name} is full height.`, [c.id, chassis.id]);
-        else if (c.lengthMm && c.lengthMm > chassis.gpuMaxMm) add('error', 'case-card-length', `${c.name} is ${c.lengthMm} mm long; ${chassis.name} fits ${chassis.gpuMaxMm} mm.`, [c.id, chassis.id]);
+        else if (c.lengthMm && chassis.gpuMaxMm && c.lengthMm > chassis.gpuMaxMm) add('error', 'case-card-length', `${c.name} is ${c.lengthMm} mm long; ${chassis.name} fits ${chassis.gpuMaxMm} mm.`, [c.id, chassis.id]);
       }
     }
     for (const g of uniq(gpuItems.map((x) => x.part))) {
@@ -408,8 +408,8 @@
       if (cpu && coolerQty < cpuQty) add('error', 'cooler-count', `${cpuQty} CPUs need ${cpuQty} coolers. Raise the cooler quantity.`, [cooler.id]);
       if (chassis) {
         if (cooler.type === 'aio') {
-          if ((chassis.radMm || 0) < cooler.radMm) add('error', 'cooler-radiator', `${chassis.name} ${chassis.radMm ? `fits up to a ${chassis.radMm} mm radiator` : "has no radiator mount"}; ${cooler.name} is ${cooler.radMm} mm.`, [cooler.id, chassis.id]);
-        } else if (cooler.heightMm > chassis.coolerMaxMm) {
+          if (chassis.radMm != null && chassis.radMm < cooler.radMm) add('error', 'cooler-radiator', `${chassis.name} ${chassis.radMm ? `fits up to a ${chassis.radMm} mm radiator` : "has no radiator mount"}; ${cooler.name} is ${cooler.radMm} mm.`, [cooler.id, chassis.id]);
+        } else if (chassis.coolerMaxMm != null && cooler.heightMm > chassis.coolerMaxMm) {
           add('error', 'cooler-height', `${cooler.name} is ${cooler.heightMm} mm tall; ${chassis.name} fits ${chassis.coolerMaxMm} mm.`, [cooler.id, chassis.id]);
         }
       }
@@ -421,6 +421,12 @@
     if (cpu && gpuCount === 0 && !cpu.igpu && !(board && board.bmc)) {
       add('warn', 'no-display', `${cpu.name} has no integrated graphics${board ? ` and ${board.name} has no BMC video` : ''}. Add a GPU to get a display.`, [cpu.id]);
     }
+
+    // ---------- Specs we only estimated ----------
+    const est = (p, what) => p && p.estimated && p.estimated.includes(what);
+    if (est(board, 'layout')) add('info', 'est-layout', `${board.name}'s slot layout is estimated from its size and chipset. Check the manual for exact PCIe and M.2 wiring.`, [board.id]);
+    if (est(chassis, 'clearance') && (gpuCount || cooler)) add('info', 'est-clearance', `We don't have GPU length, cooler height or radiator limits for ${chassis.name} yet. Check its spec sheet.`, [chassis.id]);
+    if (est(psu, 'connectors') && (gpuCount || board)) add('info', 'est-connectors', `${psu.name}'s cable counts are estimated from its wattage.`, [psu.id]);
 
     // ---------- What's missing ----------
     if (items.length) {
@@ -441,7 +447,7 @@
   }
 
   // Would adding (or swapping in) this part introduce new errors?
-  function checkCandidate(build, part, parts) {
+  function checkCandidate(build, part, parts, baseline) {
     const cat = CATEGORIES.find((c) => c.key === part.cat);
     const items = (build.items || []).slice();
     const index = indexParts(parts);
@@ -454,13 +460,17 @@
       const existing = items.find((it) => it.id === part.id);
       next = existing ? items.map((it) => (it.id === part.id ? { id: it.id, qty: it.qty + 1 } : it)) : items.concat({ id: part.id, qty: 1 });
     }
-    const before = new Set(evaluate(build, index).issues.filter((i) => i.level === 'error').map((i) => i.rule + '|' + i.msg));
+    const before = baseline || errorKeys(build, index);
     const after = evaluate({ items: next }, index);
     const fresh = after.issues.filter((i) => i.level === 'error' && !before.has(i.rule + '|' + i.msg));
     return { ok: fresh.length === 0, reasons: fresh.map((i) => i.msg), items: next };
   }
 
-  const api = { evaluate, checkCandidate, CATEGORIES, PLATFORM_NAMES, IFACE_NAMES };
+  function errorKeys(build, parts) {
+    return new Set(evaluate(build, parts).issues.filter((i) => i.level === 'error').map((i) => i.rule + '|' + i.msg));
+  }
+
+  const api = { evaluate, checkCandidate, errorKeys, CATEGORIES, PLATFORM_NAMES, IFACE_NAMES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.SLOTWISE_ENGINE = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

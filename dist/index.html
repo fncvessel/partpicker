@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Slotwise</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -195,6 +196,12 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       <button type="button" data-seg="workstation">Workstation</button>
       <button type="button" data-seg="server">Server</button>
     </div>
+    <label class="sr" for="pick-sort">Sort</label>
+    <select id="pick-sort">
+      <option value="popular">Popular</option>
+      <option value="price-asc">Price, low to high</option>
+      <option value="price-desc">Price, high to low</option>
+    </select>
     <label class="check"><input id="pick-ok" type="checkbox" checked> Only compatible <span id="pick-hidden" class="muted"></span></label>
   </div>
   <ul id="pick-list" class="pick-list"></ul>
@@ -388,13 +395,14 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   ]);
 
   // ---------- CPU coolers ----------
-  const desk = ['AM5', 'LGA1700', 'LGA1851'];
+  const desk = ['AM5', 'AM4', 'LGA1700', 'LGA1851', 'LGA1200'];
+  const deskAio = ['AM5', 'AM4', 'LGA1700', 'LGA1851'];
   add('cooler', [
     { id: 'thermalright-pa120se', name: 'Thermalright Peerless Assassin 120 SE', brand: 'Thermalright', price: 35, tags: ['consumer'], type: 'air', sockets: desk, heightMm: 155, ratedW: 245 },
     { id: 'noctua-nh-d15-g2', name: 'Noctua NH-D15 G2', brand: 'Noctua', price: 149, tags: ['consumer', 'workstation'], type: 'air', sockets: desk, heightMm: 168, ratedW: 250 },
     { id: 'noctua-nh-d12l', name: 'Noctua NH-D12L', brand: 'Noctua', price: 99, tags: ['consumer', 'server'], type: 'air', sockets: desk, heightMm: 145, ratedW: 200 },
-    { id: 'noctua-nh-l9a-am5', name: 'Noctua NH-L9a-AM5', brand: 'Noctua', price: 55, tags: ['consumer'], type: 'air', sockets: ['AM5'], heightMm: 37, ratedW: 95 },
-    { id: 'arctic-lf3-360', name: 'Arctic Liquid Freezer III 360', brand: 'Arctic', price: 119, tags: ['consumer', 'workstation'], type: 'aio', sockets: desk, heightMm: 55, radMm: 360, ratedW: 300 },
+    { id: 'noctua-nh-l9a-am5', name: 'Noctua NH-L9a-AM5', brand: 'Noctua', price: 55, tags: ['consumer'], type: 'air', sockets: ['AM5', 'AM4'], heightMm: 37, ratedW: 95 },
+    { id: 'arctic-lf3-360', name: 'Arctic Liquid Freezer III 360', brand: 'Arctic', price: 119, tags: ['consumer', 'workstation'], type: 'aio', sockets: deskAio, heightMm: 55, radMm: 360, ratedW: 300 },
     { id: 'noctua-u14s-tr5-sp6', name: 'Noctua NH-U14S TR5-SP6', brand: 'Noctua', price: 159, tags: ['workstation'], type: 'air', sockets: ['sTR5', 'SP6'], heightMm: 165, ratedW: 350 },
     { id: 'noctua-u14s-dx-4677', name: 'Noctua NH-U14S DX-4677', brand: 'Noctua', price: 139, tags: ['workstation', 'server'], type: 'air', sockets: ['LGA4677'], heightMm: 165, ratedW: 300 },
     { id: 'arctic-freezer-4u-sp5', name: 'Arctic Freezer 4U-SP5', brand: 'Arctic', price: 70, tags: ['server', 'workstation'], type: 'air', sockets: ['SP5'], heightMm: 126, ratedW: 400 },
@@ -447,7 +455,23 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       { id: 'seagate-exos-x24-24tb-sas', qty: 2 }, { id: 'corsair-sf750', qty: 1 }, { id: 'cm-nr200p', qty: 1 }, { id: 'noctua-nh-d15-g2', qty: 1 } ] },
   ];
 
-  const api = { parts, presets, pricesAsOf: PRICES_AS_OF };
+  // Merge bulk-imported parts (src/catalog.imported.json). Hand-curated parts win on name clashes.
+  const norm = (n) => n.toLowerCase().replace(/[^a-z0-9]/g, '');
+  function mergeImported(list) {
+    const names = new Set(parts.map((p) => norm(p.name)));
+    const ids = new Set(parts.map((p) => p.id));
+    let added = 0;
+    for (const p of list || []) {
+      if (ids.has(p.id) || names.has(norm(p.name))) continue;
+      ids.add(p.id); names.add(norm(p.name)); parts.push(p); added++;
+    }
+    return added;
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    try { mergeImported(require('./catalog.imported.json')); } catch (e) { /* no import yet */ }
+  }
+
+  const api = { parts, presets, pricesAsOf: PRICES_AS_OF, mergeImported };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.SLOTWISE_CATALOG = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
@@ -474,7 +498,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   ];
 
   const PLATFORM_NAMES = {
-    'am5': 'Ryzen / EPYC 4004 (AM5)', 'arrow-lake': 'Core Ultra 200S', 'core-12-14': 'Core 12th–14th gen', 'xeon-e-2400': 'Xeon E-2400',
+    'am5': 'Ryzen / EPYC 4004 (AM5)', 'am4': 'Ryzen (AM4)', 'comet-rocket': 'Core 10th/11th gen', 'arrow-lake': 'Core Ultra 200S', 'core-12-14': 'Core 12th–14th gen', 'xeon-e-2400': 'Xeon E-2400',
     'tr-7000': 'Threadripper 7000', 'tr-9000': 'Threadripper 9000', 'tr-pro-7000': 'Threadripper PRO 7000WX', 'tr-pro-9000': 'Threadripper PRO 9000WX',
     'xeon-w-2400': 'Xeon W-2400', 'xeon-w-3400': 'Xeon W-3400', 'xeon-sp-4': '4th gen Xeon Scalable', 'xeon-sp-5': '5th gen Xeon Scalable',
     'epyc-9004': 'EPYC 9004', 'epyc-9005': 'EPYC 9005', 'epyc-7003': 'EPYC 7003',
@@ -532,7 +556,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
     const cooler = coolerItems[0] && coolerItems[0].part;
     const coolerQty = qtyOf(coolerItems);
 
-    const stats = { price: sum(items, (x) => (x.part.price || 0) * x.qty), cores: cpu ? cpu.cores * cpuQty : 0, threads: cpu ? cpu.threads * cpuQty : 0 };
+    const stats = { price: sum(items, (x) => (x.part.price || 0) * x.qty), cores: cpu ? cpu.cores * cpuQty : 0, threads: cpu && cpu.threads ? cpu.threads * cpuQty : null };
 
     // ---------- one-of-a-kind parts ----------
     if (boardItems.length > 1 || qtyOf(boardItems) > 1) add('error', 'one-board', 'A build has one motherboard. Remove the extra.', boardItems.map((x) => x.part.id));
@@ -685,7 +709,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       if (width > chassis.slots) add('error', 'case-slots', `Cards need ${width} expansion slot openings; ${chassis.name} has ${chassis.slots}.`, [chassis.id]);
       for (const c of uniq(cards.map((c) => c.part))) {
         if (chassis.lowProfileOnly && !c.lowProfile) add('error', 'case-lowprofile', `${chassis.name} only takes low-profile cards; ${c.name} is full height.`, [c.id, chassis.id]);
-        else if (c.lengthMm && c.lengthMm > chassis.gpuMaxMm) add('error', 'case-card-length', `${c.name} is ${c.lengthMm} mm long; ${chassis.name} fits ${chassis.gpuMaxMm} mm.`, [c.id, chassis.id]);
+        else if (c.lengthMm && chassis.gpuMaxMm && c.lengthMm > chassis.gpuMaxMm) add('error', 'case-card-length', `${c.name} is ${c.lengthMm} mm long; ${chassis.name} fits ${chassis.gpuMaxMm} mm.`, [c.id, chassis.id]);
       }
     }
     for (const g of uniq(gpuItems.map((x) => x.part))) {
@@ -862,8 +886,8 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       if (cpu && coolerQty < cpuQty) add('error', 'cooler-count', `${cpuQty} CPUs need ${cpuQty} coolers. Raise the cooler quantity.`, [cooler.id]);
       if (chassis) {
         if (cooler.type === 'aio') {
-          if ((chassis.radMm || 0) < cooler.radMm) add('error', 'cooler-radiator', `${chassis.name} ${chassis.radMm ? `fits up to a ${chassis.radMm} mm radiator` : "has no radiator mount"}; ${cooler.name} is ${cooler.radMm} mm.`, [cooler.id, chassis.id]);
-        } else if (cooler.heightMm > chassis.coolerMaxMm) {
+          if (chassis.radMm != null && chassis.radMm < cooler.radMm) add('error', 'cooler-radiator', `${chassis.name} ${chassis.radMm ? `fits up to a ${chassis.radMm} mm radiator` : "has no radiator mount"}; ${cooler.name} is ${cooler.radMm} mm.`, [cooler.id, chassis.id]);
+        } else if (chassis.coolerMaxMm != null && cooler.heightMm > chassis.coolerMaxMm) {
           add('error', 'cooler-height', `${cooler.name} is ${cooler.heightMm} mm tall; ${chassis.name} fits ${chassis.coolerMaxMm} mm.`, [cooler.id, chassis.id]);
         }
       }
@@ -875,6 +899,12 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
     if (cpu && gpuCount === 0 && !cpu.igpu && !(board && board.bmc)) {
       add('warn', 'no-display', `${cpu.name} has no integrated graphics${board ? ` and ${board.name} has no BMC video` : ''}. Add a GPU to get a display.`, [cpu.id]);
     }
+
+    // ---------- Specs we only estimated ----------
+    const est = (p, what) => p && p.estimated && p.estimated.includes(what);
+    if (est(board, 'layout')) add('info', 'est-layout', `${board.name}'s slot layout is estimated from its size and chipset. Check the manual for exact PCIe and M.2 wiring.`, [board.id]);
+    if (est(chassis, 'clearance') && (gpuCount || cooler)) add('info', 'est-clearance', `We don't have GPU length, cooler height or radiator limits for ${chassis.name} yet. Check its spec sheet.`, [chassis.id]);
+    if (est(psu, 'connectors') && (gpuCount || board)) add('info', 'est-connectors', `${psu.name}'s cable counts are estimated from its wattage.`, [psu.id]);
 
     // ---------- What's missing ----------
     if (items.length) {
@@ -895,7 +925,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   }
 
   // Would adding (or swapping in) this part introduce new errors?
-  function checkCandidate(build, part, parts) {
+  function checkCandidate(build, part, parts, baseline) {
     const cat = CATEGORIES.find((c) => c.key === part.cat);
     const items = (build.items || []).slice();
     const index = indexParts(parts);
@@ -908,21 +938,25 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       const existing = items.find((it) => it.id === part.id);
       next = existing ? items.map((it) => (it.id === part.id ? { id: it.id, qty: it.qty + 1 } : it)) : items.concat({ id: part.id, qty: 1 });
     }
-    const before = new Set(evaluate(build, index).issues.filter((i) => i.level === 'error').map((i) => i.rule + '|' + i.msg));
+    const before = baseline || errorKeys(build, index);
     const after = evaluate({ items: next }, index);
     const fresh = after.issues.filter((i) => i.level === 'error' && !before.has(i.rule + '|' + i.msg));
     return { ok: fresh.length === 0, reasons: fresh.map((i) => i.msg), items: next };
   }
 
-  const api = { evaluate, checkCandidate, CATEGORIES, PLATFORM_NAMES, IFACE_NAMES };
+  function errorKeys(build, parts) {
+    return new Set(evaluate(build, parts).issues.filter((i) => i.level === 'error').map((i) => i.rule + '|' + i.msg));
+  }
+
+  const api = { evaluate, checkCandidate, errorKeys, CATEGORIES, PLATFORM_NAMES, IFACE_NAMES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.SLOTWISE_ENGINE = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
 </script>
 <script>(function () {
   'use strict';
-  const { parts, presets, pricesAsOf } = window.SLOTWISE_CATALOG;
-  const { evaluate, checkCandidate, CATEGORIES, IFACE_NAMES } = window.SLOTWISE_ENGINE;
+  const { parts, presets, pricesAsOf, mergeImported } = window.SLOTWISE_CATALOG;
+  const { evaluate, checkCandidate, errorKeys, CATEGORIES, IFACE_NAMES } = window.SLOTWISE_ENGINE;
   const byId = new Map(parts.map((p) => [p.id, p]));
   const STORE_KEY = 'slotwise.build.v2';
 
@@ -932,11 +966,12 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   const asOf = new Date(pricesAsOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   const priceTag = (p, n) => p.priceChecked
     ? `<span class="price" title="Lowest US street price seen ${asOf}">${money(n)}</span>`
-    : `<span class="price est" title="Estimate. No current listing found.">~${money(n)}</span>`;
+    : `<span class="price est" title="${p.source === 'dataset' ? 'Estimate: July 2025 listing adjusted for current market prices' : 'Estimate. No current listing found.'}">~${money(n)}</span>`;
+  const PICK_LIMIT = 120;
 
   // ---------- state ----------
   let build = load() || { name: 'My build', items: [] };
-  let pick = { cat: null, q: '', seg: 'all', onlyOk: true };
+  let pick = { cat: null, q: '', seg: 'all', onlyOk: true, sort: 'popular' };
 
   function clone(p) { return { name: p.name, items: p.items.map((i) => ({ id: i.id, qty: i.qty })) }; }
   function load() {
@@ -955,7 +990,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   const join = (a) => a.filter(Boolean).join(' · ');
   function specLine(p) {
     switch (p.cat) {
-      case 'cpu': return join([p.socket, `${p.cores}C/${p.threads}T`, `${p.powerW} W`, `${p.memChannels}-ch ${p.memTypes.join('/')} ${p.memModules.join('/')}`, `${p.lanes} lanes PCIe ${p.pcieGen}.0`, p.maxSockets > 1 ? `up to ${p.maxSockets}P` : '1P only', p.igpu ? 'iGPU' : '']);
+      case 'cpu': return join([p.socket, p.threads ? `${p.cores}C/${p.threads}T` : `${p.cores} cores`, `${p.powerW} W`, `${p.memChannels}-ch ${p.memTypes.join('/')} ${p.memModules.join('/')}`, `${p.lanes} lanes PCIe ${p.pcieGen}.0`, p.maxSockets > 1 ? `up to ${p.maxSockets}P` : '1P only', p.igpu ? 'iGPU' : '']);
       case 'motherboard': {
         const slots = p.pcie.reduce((s, g) => s + g.n, 0), m2n = p.m2.reduce((s, g) => s + g.n, 0);
         return join([p.sockets > 1 ? `${p.sockets}× ${p.socket}` : p.socket, p.chipset, p.formFactor, `${p.dimmSlots}× ${p.memType} ${p.memModules.join('/')}${p.ecc ? ' ECC' : ''}`, `${slots} PCIe`, `${m2n} M.2`, p.sata ? `${p.sata} SATA` : '', p.nvmePorts ? `${p.nvmePorts} NVMe ports` : '', p.ocp ? 'OCP 3.0' : '', p.bmc ? 'BMC' : '']);
@@ -1056,7 +1091,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       if (parts.length) meters.push(`<div class="meter sub"><span>${parts.join(', ')}</span></div>`);
     }
     if (stats.storage.drives) meters.push(meter('Storage', 0, null, `${stats.storage.drives} drive${stats.storage.drives > 1 ? 's' : ''}, ${+stats.storage.tb.toFixed(2)} TB raw`));
-    if (stats.cores) meters.push(meter('Compute', 0, null, `${stats.cores} cores / ${stats.threads} threads`));
+    if (stats.cores) meters.push(meter('Compute', 0, null, stats.threads ? `${stats.cores} cores / ${stats.threads} threads` : `${stats.cores} cores`));
 
     const label = { error: 'Problem', warn: 'Check', info: 'Note' };
     const list = r.issues.map((i) => `<li class="issue lvl-${i.level}"><span class="tag">${label[i.level]}</span><span>${esc(i.msg)}</span></li>`).join('');
@@ -1081,14 +1116,18 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   }
   function renderPicker() {
     const q = pick.q.trim().toLowerCase();
+    const baseline = errorKeys(build, byId);
     const rows = parts
       .filter((p) => p.cat === pick.cat)
       .filter((p) => pick.seg === 'all' || p.tags.includes(pick.seg))
       .filter((p) => !q || (p.name + ' ' + p.brand + ' ' + specLine(p)).toLowerCase().includes(q))
-      .map((p) => ({ p, c: checkCandidate(build, p, byId), inBuild: build.items.some((i) => i.id === p.id) }));
-    const shown = rows.filter((r) => !pick.onlyOk || r.c.ok).sort((a, b) => (b.c.ok - a.c.ok) || a.p.price - b.p.price);
+      .map((p) => ({ p, c: checkCandidate(build, p, byId, baseline), inBuild: build.items.some((i) => i.id === p.id) }));
+    const shown = rows.filter((r) => !pick.onlyOk || r.c.ok).sort((a, b) => (b.c.ok - a.c.ok) || (pick.sort === 'price-asc' ? a.p.price - b.p.price : pick.sort === 'price-desc' ? b.p.price - a.p.price : (a.p.rank || 0) - (b.p.rank || 0)));
     const hidden = rows.length - shown.length;
     const multi = CATEGORIES.find((c) => c.key === pick.cat).multi;
+    const total = shown.length;
+    shown.length = Math.min(shown.length, PICK_LIMIT);
+    const more = total > PICK_LIMIT ? `<li class="empty">Showing ${PICK_LIMIT} of ${total.toLocaleString()}. Search to narrow it down.</li>` : '';
     $('#pick-list').innerHTML = shown.length ? shown.map(({ p, c, inBuild }) => `
       <li class="pick-row ${c.ok ? '' : 'is-bad'}">
         <div class="part-main">
@@ -1100,7 +1139,7 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
           ${priceTag(p, p.price)}
           ${inBuild && !multi ? '<span class="muted">In build</span>' : `<button type="button" class="${c.ok ? 'primary' : 'ghost'}" data-act="choose" data-id="${p.id}">${inBuild ? 'Add one more' : 'Add'}</button>`}
         </div>
-      </li>`).join('') : `<li class="empty">Nothing here fits the current build${pick.onlyOk ? '. Turn off "Only compatible" to see everything.' : '.'}</li>`;
+      </li>`).join('') + more : `<li class="empty">Nothing here fits the current build${pick.onlyOk ? '. Turn off "Only compatible" to see everything.' : '.'}</li>`;
     $('#pick-hidden').textContent = pick.onlyOk && hidden ? `${hidden} hidden` : '';
     document.querySelectorAll('[data-seg]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.seg === pick.seg)));
   }
@@ -1125,7 +1164,9 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
       case 'close': b.closest('dialog').close(); break;
     }
   });
-  $('#pick-q').addEventListener('input', (e) => { pick.q = e.target.value; renderPicker(); });
+  let qTimer = 0;
+  $('#pick-q').addEventListener('input', (e) => { pick.q = e.target.value; clearTimeout(qTimer); qTimer = setTimeout(renderPicker, 120); });
+  $('#pick-sort').addEventListener('change', (e) => { pick.sort = e.target.value; renderPicker(); });
   $('#pick-ok').addEventListener('change', (e) => { pick.onlyOk = e.target.checked; renderPicker(); });
   document.querySelectorAll('[data-seg]').forEach((b) => b.addEventListener('click', () => { pick.seg = b.dataset.seg; renderPicker(); }));
   $('#build-name').addEventListener('change', (e) => { build.name = e.target.value.trim() || 'My build'; save(); });
@@ -1166,5 +1207,15 @@ dialog::backdrop { background: rgba(8, 14, 18, 0.45); }
   });
 
   render();
+
+  // Bulk-imported parts live beside the page in parts.json; the curated catalog works without them.
+  fetch('parts.json').then((r) => (r.ok ? r.json() : [])).then((list) => {
+    if (!mergeImported(list)) return;
+    for (const p of parts) byId.set(p.id, p);
+    const saved = load();
+    if (saved && saved.items.length > build.items.length) build = saved;
+    render();
+    if ($('#picker').open) renderPicker();
+  }).catch(() => { /* offline or missing: keep the curated catalog */ });
 })();
 </script>
