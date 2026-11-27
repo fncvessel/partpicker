@@ -185,7 +185,7 @@
     { id: 'noctua-u14s-tr5-sp6', name: 'Noctua NH-U14S TR5-SP6', brand: 'Noctua', price: 159, tags: ['workstation'], type: 'air', sockets: ['sTR5', 'SP6'], heightMm: 165, ratedW: 350 },
     { id: 'noctua-u14s-dx-4677', name: 'Noctua NH-U14S DX-4677', brand: 'Noctua', price: 139, tags: ['workstation', 'server'], type: 'air', sockets: ['LGA4677'], heightMm: 165, ratedW: 300 },
     { id: 'arctic-freezer-4u-sp5', name: 'Arctic Freezer 4U-SP5', brand: 'Arctic', price: 70, tags: ['server', 'workstation'], type: 'air', sockets: ['SP5'], heightMm: 126, ratedW: 400 },
-    { id: 'noctua-u9-tr4-sp3', name: 'Noctua NH-U9 TR4-SP3', brand: 'Noctua', price: 89, tags: ['server'], type: 'air', sockets: ['SP3', 'TR4'], heightMm: 125, ratedW: 225 },
+    { id: 'noctua-u9-tr4-sp3', name: 'Noctua NH-U9 TR4-SP3', brand: 'Noctua', price: 89, tags: ['server'], type: 'air', sockets: ['SP3', 'TR4', 'sTRX4', 'sWRX8'], heightMm: 125, ratedW: 225 },
     { id: 'passive-2u-sp5', name: '2U passive heatsink (SP5)', brand: 'Generic', price: 90, tags: ['server'], type: 'passive', sockets: ['SP5'], heightMm: 64, ratedW: 400 },
     { id: 'passive-2u-4677', name: '2U passive heatsink (LGA4677)', brand: 'Generic', price: 80, tags: ['server'], type: 'passive', sockets: ['LGA4677'], heightMm: 64, ratedW: 350 },
     { id: 'passive-1u-4677', name: '1U passive heatsink (LGA4677)', brand: 'Generic', price: 60, tags: ['server'], type: 'passive', sockets: ['LGA4677'], heightMm: 27, ratedW: 205 },
@@ -314,6 +314,52 @@
       pcie: [slot(1, 16, 16, 5, 1, 'cpu-x16'), slot(1, 16, 8, 5, 1, 'cpu-x16'), slot(1, 4, 4, 4, 'pch')], laneGroups: { 'cpu-x16': 16 }, m2: [m2(1, 5, 1, ['2280', '22110']), m2(1, 4, 'pch')], sata: 4, nvmePorts: 0, slotPositions: 7, eps8: 1, chipsetLanes: 8, watts: 40 }),
   ]);
 
+  // DDR4 Threadripper (X399 / TRX40 / WRX80). Discontinued, so prices are rough used-market estimates.
+  const d4u = { memTypes: ['DDR4'], memModules: ['UDIMM'], ecc: true, igpu: false, maxSockets: 1 };
+  const d4pro = { memTypes: ['DDR4'], memModules: ['RDIMM', 'LRDIMM', 'UDIMM'], ecc: true, igpu: false, maxSockets: 1 };
+  addNew('cpu', [
+    ...family({ prefix: 'tr-', name: 'AMD Ryzen Threadripper', brand: 'AMD', tags: ['workstation'], spec: { ...d4u, socket: 'TR4', platform: 'tr-1000-2000', memChannels: 4, memSpeed: 2666, maxMemGB: 512, lanes: 64, pcieGen: 3 } }, [
+      ['1900X', 8, 0, 180, 60], ['1920X', 12, 0, 180, 80], ['1950X', 16, 0, 180, 110],
+      ['2920X', 12, 0, 180, 110, 'm2933'], ['2950X', 16, 0, 180, 160, 'm2933'], ['2970WX', 24, 0, 250, 230, 'm2933'], ['2990WX', 32, 0, 250, 320, 'm2933'],
+    ]),
+    ...family({ prefix: 'tr-', name: 'AMD Ryzen Threadripper', brand: 'AMD', tags: ['workstation'], spec: { ...d4u, socket: 'sTRX4', platform: 'tr-3000', memChannels: 4, memSpeed: 3200, maxMemGB: 256, lanes: 72, pcieGen: 4 } }, [
+      ['3960X', 24, 0, 280, 550], ['3970X', 32, 0, 280, 800], ['3990X', 64, 0, 280, 1800],
+    ]),
+    ...family({ prefix: 'tr-pro-', name: 'AMD Ryzen Threadripper PRO', brand: 'AMD', tags: ['workstation'], spec: { ...d4pro, socket: 'sWRX8', platform: 'tr-pro-3000', memChannels: 8, memSpeed: 3200, maxMemGB: 2048, lanes: 128, pcieGen: 4 } }, [
+      ['3945WX', 12, 0, 280, 250], ['3955WX', 16, 0, 280, 300], ['3975WX', 32, 0, 280, 900], ['3995WX', 64, 0, 280, 1900],
+    ]),
+    ...family({ prefix: 'tr-pro-', name: 'AMD Ryzen Threadripper PRO', brand: 'AMD', tags: ['workstation'], spec: { ...d4pro, socket: 'sWRX8', platform: 'tr-pro-5000', memChannels: 8, memSpeed: 3200, maxMemGB: 2048, lanes: 128, pcieGen: 4 } }, [
+      ['5945WX', 12, 0, 280, 700], ['5955WX', 16, 0, 280, 1000], ['5965WX', 24, 0, 280, 1500], ['5975WX', 32, 0, 280, 2200], ['5995WX', 64, 0, 280, 3800],
+    ]),
+  ]);
+  const hedt = (o) => Object.assign({ sockets: 1, memType: 'DDR4', ecc: true, ocp: 0, nvmePorts: 0, bmc: false, bifurcation: true, watts: 60, tags: ['workstation'], eps8: 2 }, o);
+  const x399 = { socket: 'TR4', platforms: ['tr-1000-2000'], chipset: 'X399', memModules: ['UDIMM'], dimmSlots: 8, memChannels: 4, maxMemGB: 512, chipsetLanes: 8 };
+  const trx40 = { socket: 'sTRX4', platforms: ['tr-3000'], chipset: 'TRX40', memModules: ['UDIMM'], dimmSlots: 8, memChannels: 4, maxMemGB: 256, chipsetLanes: 16 };
+  const wrx80 = { socket: 'sWRX8', platforms: ['tr-pro-3000', 'tr-pro-5000'], chipset: 'WRX80', memModules: ['RDIMM', 'LRDIMM', 'UDIMM'], dimmSlots: 8, memChannels: 8, maxMemGB: 2048, chipsetLanes: 8 };
+  addNew('motherboard', [
+    hedt({ ...x399, id: 'asus-zenith-extreme', name: 'ASUS ROG Zenith Extreme', brand: 'ASUS', price: 250, formFactor: 'E-ATX',
+      pcie: [slot(2, 16, 16, 3, 1), slot(2, 16, 8, 3, 1), slot(1, 4, 4, 2, 'pch')], m2: [m2(3, 3, 1)], sata: 6, slotPositions: 7 }),
+    hedt({ ...x399, id: 'msi-x399-pro-carbon', name: 'MSI X399 Gaming Pro Carbon AC', brand: 'MSI', price: 180, formFactor: 'ATX',
+      pcie: [slot(2, 16, 16, 3, 1), slot(2, 16, 8, 3, 1)], m2: [m2(2, 3, 1, ['2280', '22110']), m2(1, 3, 1)], sata: 8, slotPositions: 7 }),
+    hedt({ ...x399, id: 'gigabyte-x399-aorus-xtreme', name: 'Gigabyte X399 Aorus Xtreme', brand: 'Gigabyte', price: 230, formFactor: 'E-ATX',
+      pcie: [slot(2, 16, 16, 3, 1), slot(2, 16, 8, 3, 1)], m2: [m2(3, 3, 1, ['2280', '22110'])], sata: 6, slotPositions: 7 }),
+    hedt({ ...trx40, id: 'asus-zenith-ii-extreme-alpha', name: 'ASUS ROG Zenith II Extreme Alpha', brand: 'ASUS', price: 450, formFactor: 'E-ATX',
+      pcie: [slot(2, 16, 16, 4, 1), slot(2, 16, 8, 4, 1)], m2: [m2(3, 4, 1), m2(2, 4, 'pch')], sata: 8, slotPositions: 7 }),
+    hedt({ ...trx40, id: 'asrock-trx40-creator', name: 'ASRock TRX40 Creator', brand: 'ASRock', price: 330, formFactor: 'ATX',
+      pcie: [slot(3, 16, 16, 4, 1), slot(1, 16, 8, 4, 1)], m2: [m2(1, 4, 1), m2(1, 4, 'pch')], sata: 8, slotPositions: 7 }),
+    hedt({ ...trx40, id: 'gigabyte-trx40-aorus-master', name: 'Gigabyte TRX40 Aorus Master', brand: 'Gigabyte', price: 350, formFactor: 'E-ATX',
+      pcie: [slot(2, 16, 16, 4, 1), slot(2, 16, 8, 4, 1)], m2: [m2(2, 4, 1, ['2280', '22110']), m2(1, 4, 'pch')], sata: 6, slotPositions: 7 }),
+    hedt({ ...wrx80, id: 'asus-wrx80e-sage', name: 'ASUS Pro WS WRX80E-SAGE SE WiFi', brand: 'ASUS', price: 700, formFactor: 'EEB',
+      pcie: [slot(7, 16, 16, 4, 1)], m2: [m2(2, 4, 1, ['2280', '22110'])], sata: 8, nvmePorts: 2, slotPositions: 7, eps8: 2 }),
+    hedt({ ...wrx80, id: 'sm-m12swa-tf', name: 'Supermicro M12SWA-TF', brand: 'Supermicro', price: 650, formFactor: 'E-ATX', tags: ['workstation', 'server'],
+      pcie: [slot(6, 16, 16, 4, 1)], m2: [m2(4, 4, 1, ['2280', '22110'])], sata: 8, nvmePorts: 2, slotPositions: 7, bmc: true }),
+    hedt({ ...wrx80, id: 'gigabyte-wrx80-su8', name: 'Gigabyte WRX80-SU8-IPMI', brand: 'Gigabyte', price: 600, formFactor: 'E-ATX', tags: ['workstation', 'server'],
+      pcie: [slot(7, 16, 16, 4, 1)], m2: [m2(2, 4, 1, ['2280', '22110'])], sata: 8, nvmePorts: 2, slotPositions: 7, bmc: true }),
+  ]);
+  addNew('cooler', [
+    { id: 'arctic-freezer-4u-sp3', name: 'Arctic Freezer 4U SP3', brand: 'Arctic', price: 60, tags: ['workstation', 'server'], type: 'air', sockets: ['SP3', 'TR4', 'sTRX4', 'sWRX8'], heightMm: 145, ratedW: 280 },
+  ]);
+
   // Server memory (prices scale from ~$40/GB DDR5 RDIMM, Nov 2026)
   const mem = (id, name, brand, price, type, module, gb, speed, tags) => ({ id, name, brand, price, tags: tags || ['server', 'workstation'], type, module, ecc: true, gb, sticks: 1, speed });
   addNew('memory', [
@@ -323,6 +369,7 @@
     mem('samsung-ddr5-5600-128-rdimm', 'Samsung DDR5-5600 128 GB RDIMM (3DS)', 'Samsung', 5600, 'DDR5', 'RDIMM', 128, 5600),
     mem('kingston-ddr5-5600-16-ecc', 'Kingston Server Premier DDR5-5600 16 GB ECC UDIMM', 'Kingston', 340, 'DDR5', 'UDIMM', 16, 5600),
     mem('kingston-ddr5-5600-48-ecc', 'Kingston Server Premier DDR5-5600 48 GB ECC UDIMM', 'Kingston', 1000, 'DDR5', 'UDIMM', 48, 5600),
+    mem('kingston-ddr4-3200-32-ecc', 'Kingston Server Premier DDR4-3200 32 GB ECC UDIMM', 'Kingston', 260, 'DDR4', 'UDIMM', 32, 3200, ['workstation', 'server']),
     mem('samsung-ddr4-3200-16-rdimm', 'Samsung DDR4-3200 16 GB RDIMM', 'Samsung', 160, 'DDR4', 'RDIMM', 16, 3200, ['server']),
     mem('samsung-ddr4-3200-64-rdimm', 'Samsung DDR4-3200 64 GB RDIMM', 'Samsung', 640, 'DDR4', 'RDIMM', 64, 3200, ['server']),
     mem('samsung-ddr4-3200-128-lrdimm', 'Samsung DDR4-3200 128 GB LRDIMM', 'Samsung', 1300, 'DDR4', 'LRDIMM', 128, 3200, ['server']),
@@ -383,12 +430,12 @@
     { id: 'sm-pws-1k30d', name: 'Supermicro PWS-1K30D-1R 1300 W module', brand: 'Supermicro', price: 300, tags: ['server'], form: 'Server module', watts: 1300, efficiency: 'Titanium', redundant: true, conn: null },
   ]);
   addNew('cooler', [
-    { id: 'noctua-u14s-tr4-sp3', name: 'Noctua NH-U14S TR4-SP3', brand: 'Noctua', price: 89, tags: ['server', 'workstation'], type: 'air', sockets: ['SP3', 'TR4'], heightMm: 165, ratedW: 280 },
+    { id: 'noctua-u14s-tr4-sp3', name: 'Noctua NH-U14S TR4-SP3', brand: 'Noctua', price: 89, tags: ['server', 'workstation'], type: 'air', sockets: ['SP3', 'TR4', 'sTRX4', 'sWRX8'], heightMm: 165, ratedW: 280 },
     { id: 'noctua-d9-tr5-sp6', name: 'Noctua NH-D9 TR5-SP6 4U', brand: 'Noctua', price: 119, tags: ['server', 'workstation'], type: 'air', sockets: ['sTR5', 'SP6'], heightMm: 126, ratedW: 300 },
     { id: 'noctua-d9-dx-4677', name: 'Noctua NH-D9 DX-4677 4U', brand: 'Noctua', price: 119, tags: ['server', 'workstation'], type: 'air', sockets: ['LGA4677'], heightMm: 126, ratedW: 270 },
     { id: 'noctua-u12s-dx-4677', name: 'Noctua NH-U12S DX-4677', brand: 'Noctua', price: 109, tags: ['server', 'workstation'], type: 'air', sockets: ['LGA4677'], heightMm: 158, ratedW: 250 },
     { id: 'passive-2u-sp6', name: '2U passive heatsink (SP6)', brand: 'Generic', price: 70, tags: ['server'], type: 'passive', sockets: ['SP6', 'sTR5'], heightMm: 64, ratedW: 225 },
-    { id: 'passive-2u-sp3', name: '2U passive heatsink (SP3)', brand: 'Generic', price: 60, tags: ['server'], type: 'passive', sockets: ['SP3'], heightMm: 64, ratedW: 280 },
+    { id: 'passive-2u-sp3', name: '2U passive heatsink (SP3)', brand: 'Generic', price: 60, tags: ['server'], type: 'passive', sockets: ['SP3', 'sWRX8'], heightMm: 64, ratedW: 280 },
     { id: 'passive-1u-sp3', name: '1U passive heatsink (SP3)', brand: 'Generic', price: 50, tags: ['server'], type: 'passive', sockets: ['SP3'], heightMm: 27, ratedW: 200 },
     { id: 'active-4u-lga1700', name: '4U active heatsink (LGA1700/AM5)', brand: 'Generic', price: 45, tags: ['server'], type: 'air', sockets: ['LGA1700', 'AM5', 'AM4'], heightMm: 120, ratedW: 150 },
   ]);

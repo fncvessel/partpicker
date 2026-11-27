@@ -13,7 +13,7 @@ A PC build planner that covers consumer, workstation and server hardware, with a
 - `npm test` runs the engine tests
 
 ## What the engine checks
-Curated server/workstation coverage: EPYC 4004/7003/8004/9004/9005, Xeon E-2400, Xeon Scalable 4th/5th gen, Xeon W-2400/3400/3500, Threadripper 7000/9000 and PRO, with matching boards, RDIMMs, coolers, pro and datacenter GPUs, HBAs, NICs, enterprise drives and rack chassis (prices are list estimates).
+Curated server/workstation coverage: EPYC 4004/7003/8004/9004/9005, Xeon E-2400, Xeon Scalable 4th/5th gen, Xeon W-2400/3400/3500, Threadripper 1000-9000 and PRO 3000WX-9000WX (DDR4 X399/TRX40/WRX80 included), with matching boards, RDIMMs, coolers, pro and datacenter GPUs, HBAs, NICs, enterprise drives and rack chassis (prices are list estimates).
 
 Socket and chipset/platform support (e.g. Xeon Scalable on a W790 board), CPU count vs sockets and 1P-only parts,
 memory generation, UDIMM/RDIMM/LRDIMM, ECC, slots, capacity, channel population, PCIe slot assignment with
