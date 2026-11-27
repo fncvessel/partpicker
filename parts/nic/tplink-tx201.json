@@ -1,0 +1,16 @@
+{
+  "id": "tplink-tx201",
+  "name": "TP-Link TX201 2.5GbE",
+  "brand": "TP-Link",
+  "price": 30,
+  "tags": ["consumer"],
+  "form": "pcie",
+  "speedG": 2.5,
+  "ports": 1,
+  "gen": 2,
+  "lanes": 1,
+  "size": 1,
+  "watts": 4,
+  "widthSlots": 1,
+  "lowProfile": true
+}

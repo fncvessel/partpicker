@@ -1,0 +1,17 @@
+{
+  "id": "silverstone-rm44",
+  "name": "SilverStone RM44 (4U)",
+  "brand": "SilverStone",
+  "price": 319,
+  "tags": ["server", "workstation"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["mATX", "ATX", "CEB", "E-ATX", "EEB"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 312,
+  "coolerMaxMm": 148,
+  "radMm": 0,
+  "slots": 8,
+  "airflow": "server",
+  "bays": { "3.5": 2, "2.5": 4 }
+}

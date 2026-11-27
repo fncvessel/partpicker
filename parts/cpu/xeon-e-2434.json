@@ -1,0 +1,22 @@
+{
+  "id": "xeon-e-2434",
+  "name": "Intel Xeon E-2434",
+  "brand": "Intel",
+  "price": 226,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA1700",
+  "platform": "xeon-e-2400",
+  "memChannels": 2,
+  "memSpeed": 4800,
+  "maxMemGB": 128,
+  "lanes": 16,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 4,
+  "threads": 8,
+  "powerW": 55
+}

@@ -1,0 +1,13 @@
+{
+  "id": "micron-7500-3.84-u3",
+  "name": "Micron 7500 PRO 3.84 TB U.3",
+  "brand": "Micron",
+  "price": 700,
+  "tags": ["server"],
+  "iface": "u3",
+  "form": "2.5\"",
+  "gen": 4,
+  "tb": 3.84,
+  "watts": 15,
+  "media": "SSD"
+}

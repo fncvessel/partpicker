@@ -1,0 +1,11 @@
+{
+  "id": "arctic-freezer-4u-sp5",
+  "name": "Arctic Freezer 4U-SP5",
+  "brand": "Arctic",
+  "price": 70,
+  "tags": ["server", "workstation"],
+  "type": "air",
+  "sockets": ["SP5"],
+  "heightMm": 126,
+  "ratedW": 400
+}

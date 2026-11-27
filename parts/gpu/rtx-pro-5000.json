@@ -1,0 +1,17 @@
+{
+  "id": "rtx-pro-5000",
+  "name": "NVIDIA RTX PRO 5000 Blackwell",
+  "brand": "NVIDIA",
+  "price": 5500,
+  "tags": ["workstation"],
+  "vramGB": 48,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

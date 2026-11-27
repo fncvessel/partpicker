@@ -1,0 +1,17 @@
+{
+  "id": "rtx-pro-6000-server",
+  "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "brand": "NVIDIA",
+  "price": 16500,
+  "tags": ["server"],
+  "vramGB": 96,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 600,
+  "conn": { "h12v": 1 },
+  "cooling": "passive",
+  "lowProfile": false
+}

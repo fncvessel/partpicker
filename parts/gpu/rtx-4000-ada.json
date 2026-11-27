@@ -1,0 +1,17 @@
+{
+  "id": "rtx-4000-ada",
+  "name": "NVIDIA RTX 4000 Ada",
+  "brand": "NVIDIA",
+  "price": 1500,
+  "tags": ["workstation"],
+  "vramGB": 20,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 241,
+  "powerW": 130,
+  "conn": { "pcie8": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

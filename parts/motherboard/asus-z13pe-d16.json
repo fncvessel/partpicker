@@ -1,0 +1,32 @@
+{
+  "id": "asus-z13pe-d16",
+  "name": "ASUS Z13PE-D16",
+  "brand": "ASUS",
+  "price": 1099,
+  "tags": ["server"],
+  "sockets": 2,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 1,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 90,
+  "socket": "LGA4677",
+  "platforms": ["xeon-sp-4", "xeon-sp-5"],
+  "chipset": "C741",
+  "formFactor": "EEB",
+  "dimmSlots": 16,
+  "memChannels": 8,
+  "maxMemGB": 4096,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 2 }
+  ],
+  "m2": [{ "n": 2, "gen": 4, "cpu": "pch", "sizes": ["2280", "22110"] }],
+  "sata": 8,
+  "nvmePorts": 4,
+  "slotPositions": 7,
+  "eps8": 4
+}

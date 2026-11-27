@@ -1,0 +1,32 @@
+{
+  "id": "gigabyte-me33-ar0",
+  "name": "Gigabyte ME33-AR0",
+  "brand": "Gigabyte",
+  "price": 1049,
+  "tags": ["server"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 1,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 55,
+  "socket": "SP6",
+  "platforms": ["epyc-8004"],
+  "chipset": "SoC",
+  "formFactor": "E-ATX",
+  "dimmSlots": 12,
+  "memChannels": 6,
+  "maxMemGB": 1152,
+  "pcie": [
+    { "n": 4, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 5, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 4,
+  "nvmePorts": 6,
+  "slotPositions": 7,
+  "eps8": 1
+}

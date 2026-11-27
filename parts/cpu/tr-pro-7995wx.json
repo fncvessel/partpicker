@@ -1,0 +1,22 @@
+{
+  "id": "tr-pro-7995wx",
+  "name": "AMD Threadripper PRO 7995WX",
+  "brand": "AMD",
+  "price": 9999,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "sTR5",
+  "platform": "tr-pro-7000",
+  "memChannels": 8,
+  "memSpeed": 5200,
+  "maxMemGB": 2048,
+  "lanes": 128,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 96,
+  "threads": 192,
+  "powerW": 350
+}

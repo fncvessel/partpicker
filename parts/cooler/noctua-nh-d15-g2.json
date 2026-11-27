@@ -1,0 +1,11 @@
+{
+  "id": "noctua-nh-d15-g2",
+  "name": "Noctua NH-D15 G2",
+  "brand": "Noctua",
+  "price": 149,
+  "tags": ["consumer", "workstation"],
+  "type": "air",
+  "sockets": ["AM5", "AM4", "LGA1700", "LGA1851", "LGA1200"],
+  "heightMm": 168,
+  "ratedW": 250
+}

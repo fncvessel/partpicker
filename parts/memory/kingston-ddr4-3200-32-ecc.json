@@ -1,0 +1,13 @@
+{
+  "id": "kingston-ddr4-3200-32-ecc",
+  "name": "Kingston Server Premier DDR4-3200 32 GB ECC UDIMM",
+  "brand": "Kingston",
+  "price": 260,
+  "tags": ["workstation", "server"],
+  "type": "DDR4",
+  "module": "UDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 3200
+}

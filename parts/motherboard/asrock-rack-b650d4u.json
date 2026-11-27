@@ -1,0 +1,33 @@
+{
+  "id": "asrock-rack-b650d4u",
+  "name": "ASRock Rack B650D4U",
+  "brand": "ASRock Rack",
+  "price": 299,
+  "tags": ["server"],
+  "socket": "AM5",
+  "platforms": ["am5"],
+  "chipset": "B650",
+  "formFactor": "mATX",
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "dimmSlots": 4,
+  "memChannels": 2,
+  "maxMemGB": 192,
+  "pcie": [
+    { "n": 1, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 4, "gen": 4, "cpu": 1 },
+    { "n": 1, "size": 4, "lanes": 4, "gen": 4, "cpu": "pch" }
+  ],
+  "m2": [{ "n": 1, "gen": 5, "cpu": 1, "sizes": ["2280"] }, { "n": 1, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "ocp": 0,
+  "slotPositions": 4,
+  "eps8": 1,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 40
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "key": "gaming",
+    "name": "Gaming tower",
+    "items": [
+      { "id": "r7-9800x3d", "qty": 1 },
+      { "id": "msi-b650-tomahawk", "qty": 1 },
+      { "id": "corsair-ddr5-6000-2x16", "qty": 1 },
+      { "id": "rtx-5080-fe", "qty": 1 },
+      { "id": "samsung-990-pro-2tb", "qty": 1 },
+      { "id": "corsair-rm850x", "qty": 1 },
+      { "id": "fractal-north", "qty": 1 },
+      { "id": "thermalright-pa120se", "qty": 1 }
+    ]
+  },
+  {
+    "key": "ai-workstation",
+    "name": "Threadripper PRO AI workstation",
+    "items": [
+      { "id": "tr-pro-7975wx", "qty": 1 },
+      { "id": "asus-wrx90e-sage", "qty": 1 },
+      { "id": "samsung-ddr5-5600-64-rdimm", "qty": 8 },
+      { "id": "rtx-pro-6000-maxq", "qty": 2 },
+      { "id": "crucial-t705-2tb", "qty": 2 },
+      { "id": "cx6-dx-100g", "qty": 1 },
+      { "id": "seasonic-prime-tx-1600", "qty": 1 },
+      { "id": "fractal-define-7-xl", "qty": 1 },
+      { "id": "noctua-u14s-tr5-sp6", "qty": 1 }
+    ]
+  },
+  {
+    "key": "nvme-server",
+    "name": "2U EPYC NVMe server",
+    "items": [
+      { "id": "epyc-9354p", "qty": 1 },
+      { "id": "sm-h13ssl-n", "qty": 1 },
+      { "id": "samsung-ddr5-4800-32-rdimm", "qty": 12 },
+      { "id": "micron-7450-pro-3.84", "qty": 8 },
+      { "id": "broadcom-9500-16i", "qty": 1 },
+      { "id": "cx6-dx-100g", "qty": 1 },
+      { "id": "sm-pws-2k08a", "qty": 2 },
+      { "id": "sm-cse-216-nvme", "qty": 1 },
+      { "id": "passive-2u-sp5", "qty": 1 }
+    ]
+  },
+  {
+    "key": "xeon-nas",
+    "name": "Dual Xeon 4U storage box",
+    "items": [
+      { "id": "xeon-gold-6430", "qty": 2 },
+      { "id": "sm-x13dei", "qty": 1 },
+      { "id": "samsung-ddr5-4800-32-rdimm", "qty": 16 },
+      { "id": "seagate-exos-x24-24tb-sas", "qty": 12 },
+      { "id": "samsung-pm9a3-1.92-m2", "qty": 2 },
+      { "id": "broadcom-9500-16i", "qty": 1 },
+      { "id": "intel-x710-da2", "qty": 1 },
+      { "id": "sm-pws-1k62a", "qty": 2 },
+      { "id": "sm-cse-846", "qty": 1 },
+      { "id": "passive-2u-4677", "qty": 2 }
+    ]
+  },
+  {
+    "key": "broken",
+    "name": "Broken on purpose",
+    "items": [
+      { "id": "cu9-285k", "qty": 1 },
+      { "id": "asus-strix-b650e-i", "qty": 1 },
+      { "id": "samsung-ddr4-3200-32-rdimm", "qty": 4 },
+      { "id": "rtx-5090-fe", "qty": 1 },
+      { "id": "seagate-exos-x24-24tb-sas", "qty": 2 },
+      { "id": "corsair-sf750", "qty": 1 },
+      { "id": "cm-nr200p", "qty": 1 },
+      { "id": "noctua-nh-d15-g2", "qty": 1 }
+    ]
+  }
+]

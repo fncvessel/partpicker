@@ -1,0 +1,12 @@
+{
+  "id": "sm-pws-1k30d",
+  "name": "Supermicro PWS-1K30D-1R 1300 W module",
+  "brand": "Supermicro",
+  "price": 300,
+  "tags": ["server"],
+  "form": "Server module",
+  "watts": 1300,
+  "efficiency": "Titanium",
+  "redundant": true,
+  "conn": null
+}

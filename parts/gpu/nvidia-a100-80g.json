@@ -1,0 +1,17 @@
+{
+  "id": "nvidia-a100-80g",
+  "name": "NVIDIA A100 80GB PCIe",
+  "brand": "NVIDIA",
+  "price": 15000,
+  "tags": ["server"],
+  "vramGB": 80,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "pcie8": 1 },
+  "cooling": "passive",
+  "lowProfile": false
+}

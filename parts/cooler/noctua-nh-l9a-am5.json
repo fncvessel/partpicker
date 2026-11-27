@@ -1,0 +1,11 @@
+{
+  "id": "noctua-nh-l9a-am5",
+  "name": "Noctua NH-L9a-AM5",
+  "brand": "Noctua",
+  "price": 55,
+  "tags": ["consumer"],
+  "type": "air",
+  "sockets": ["AM5", "AM4"],
+  "heightMm": 37,
+  "ratedW": 95
+}

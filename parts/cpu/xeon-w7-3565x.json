@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w7-3565x",
+  "name": "Intel Xeon w7-3565X",
+  "brand": "Intel",
+  "price": 3789,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-3500",
+  "memChannels": 8,
+  "memSpeed": 5600,
+  "maxMemGB": 4096,
+  "lanes": 112,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 32,
+  "threads": 64,
+  "powerW": 335
+}

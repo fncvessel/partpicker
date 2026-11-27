@@ -1,0 +1,32 @@
+{
+  "id": "asus-w790-ace",
+  "name": "ASUS Pro WS W790-ACE",
+  "brand": "ASUS",
+  "price": 899,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 70,
+  "socket": "LGA4677",
+  "platforms": ["xeon-w-2400", "xeon-w-3400", "xeon-w-3500"],
+  "chipset": "W790",
+  "formFactor": "CEB",
+  "dimmSlots": 8,
+  "memChannels": 8,
+  "maxMemGB": 2048,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 1, "gen": 5, "cpu": 1, "sizes": ["2280"] }, { "n": 2, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "slotPositions": 7,
+  "eps8": 2
+}

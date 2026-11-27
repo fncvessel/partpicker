@@ -1,0 +1,16 @@
+{
+  "id": "intel-x710-da2",
+  "name": "Intel X710-DA2 10G SFP+",
+  "brand": "Intel",
+  "price": 260,
+  "tags": ["server", "workstation"],
+  "form": "pcie",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 7,
+  "widthSlots": 1,
+  "lowProfile": true
+}

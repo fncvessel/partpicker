@@ -1,0 +1,18 @@
+{
+  "id": "sm-cse-847",
+  "name": "Supermicro CSE-847 (4U, 36× 3.5\" hot-swap)",
+  "brand": "Supermicro",
+  "price": 2400,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 64,
+  "radMm": 0,
+  "slots": 7,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "3.5": 36 }
+}

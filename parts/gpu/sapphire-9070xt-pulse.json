@@ -1,0 +1,18 @@
+{
+  "id": "sapphire-9070xt-pulse",
+  "name": "Sapphire Pulse Radeon RX 9070 XT",
+  "brand": "Sapphire",
+  "price": 919,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "vramGB": 16,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 3,
+  "lengthMm": 314,
+  "powerW": 304,
+  "conn": { "pcie8": 2 },
+  "cooling": "open-air",
+  "lowProfile": false
+}

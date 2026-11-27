@@ -1,0 +1,22 @@
+{
+  "id": "epyc-8224p",
+  "name": "AMD EPYC 8224P",
+  "brand": "AMD",
+  "price": 855,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP6",
+  "platform": "epyc-8004",
+  "memChannels": 6,
+  "memSpeed": 4800,
+  "maxMemGB": 1152,
+  "lanes": 96,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 160
+}

@@ -1,0 +1,32 @@
+{
+  "id": "asus-zenith-ii-extreme-alpha",
+  "name": "ASUS ROG Zenith II Extreme Alpha",
+  "brand": "ASUS",
+  "price": 450,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "ecc": true,
+  "ocp": 0,
+  "nvmePorts": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "watts": 60,
+  "eps8": 2,
+  "socket": "sTRX4",
+  "platforms": ["tr-3000"],
+  "chipset": "TRX40",
+  "memModules": ["UDIMM"],
+  "dimmSlots": 8,
+  "memChannels": 4,
+  "maxMemGB": 256,
+  "chipsetLanes": 16,
+  "formFactor": "E-ATX",
+  "pcie": [
+    { "n": 2, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 8, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [{ "n": 3, "gen": 4, "cpu": 1, "sizes": ["2280"] }, { "n": 2, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 8,
+  "slotPositions": 7
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtx-a2000-12gb",
+  "name": "NVIDIA RTX A2000 12GB",
+  "brand": "NVIDIA",
+  "price": 650,
+  "tags": ["workstation", "server"],
+  "vramGB": 12,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 168,
+  "powerW": 70,
+  "conn": {},
+  "cooling": "blower",
+  "lowProfile": true
+}

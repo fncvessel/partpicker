@@ -1,0 +1,22 @@
+{
+  "id": "tr-7960x",
+  "name": "AMD Threadripper 7960X",
+  "brand": "AMD",
+  "price": 1499,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "sTR5",
+  "platform": "tr-7000",
+  "memChannels": 4,
+  "memSpeed": 5200,
+  "maxMemGB": 1024,
+  "lanes": 88,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 350
+}

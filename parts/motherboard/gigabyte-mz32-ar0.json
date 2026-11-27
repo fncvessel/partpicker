@@ -1,0 +1,32 @@
+{
+  "id": "gigabyte-mz32-ar0",
+  "name": "Gigabyte MZ32-AR0",
+  "brand": "Gigabyte",
+  "price": 799,
+  "tags": ["server"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "memModules": ["RDIMM", "LRDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 60,
+  "socket": "SP3",
+  "platforms": ["epyc-7003"],
+  "chipset": "SoC",
+  "formFactor": "E-ATX",
+  "dimmSlots": 16,
+  "memChannels": 8,
+  "maxMemGB": 4096,
+  "pcie": [
+    { "n": 4, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 },
+    { "n": 3, "size": 8, "lanes": 8, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [{ "n": 1, "gen": 4, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 4,
+  "nvmePorts": 4,
+  "slotPositions": 7,
+  "eps8": 2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "fsp-twins-pro-900",
+  "name": "FSP Twins Pro 900 W (redundant ATX)",
+  "brand": "FSP",
+  "price": 499,
+  "tags": ["server"],
+  "form": "ATX",
+  "watts": 900,
+  "efficiency": "Platinum",
+  "redundant": true,
+  "builtInRedundant": true,
+  "conn": { "eps8": 2, "pcie8": 2, "h12v": 0 }
+}

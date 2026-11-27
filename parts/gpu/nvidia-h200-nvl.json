@@ -1,0 +1,17 @@
+{
+  "id": "nvidia-h200-nvl",
+  "name": "NVIDIA H200 NVL",
+  "brand": "NVIDIA",
+  "price": 32000,
+  "tags": ["server"],
+  "vramGB": 141,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 600,
+  "conn": { "h12v": 1 },
+  "cooling": "passive",
+  "lowProfile": false
+}

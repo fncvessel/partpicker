@@ -1,0 +1,22 @@
+{
+  "id": "tr-pro-7985wx",
+  "name": "AMD Threadripper PRO 7985WX",
+  "brand": "AMD",
+  "price": 7349,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "sTR5",
+  "platform": "tr-pro-7000",
+  "memChannels": 8,
+  "memSpeed": 5200,
+  "maxMemGB": 2048,
+  "lanes": 128,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 64,
+  "threads": 128,
+  "powerW": 350
+}

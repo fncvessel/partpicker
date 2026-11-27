@@ -1,0 +1,16 @@
+{
+  "id": "intel-x550-t2",
+  "name": "Intel X550-T2 10GBASE-T",
+  "brand": "Intel",
+  "price": 199,
+  "tags": ["workstation", "server"],
+  "form": "pcie",
+  "speedG": 10,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 4,
+  "size": 4,
+  "watts": 13,
+  "widthSlots": 1,
+  "lowProfile": true
+}

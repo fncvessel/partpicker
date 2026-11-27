@@ -1,0 +1,22 @@
+{
+  "id": "xeon-e-2488",
+  "name": "Intel Xeon E-2488",
+  "brand": "Intel",
+  "price": 606,
+  "tags": ["server"],
+  "socket": "LGA1700",
+  "platform": "xeon-e-2400",
+  "cores": 8,
+  "threads": 16,
+  "powerW": 95,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 4800,
+  "maxMemGB": 128,
+  "lanes": 16,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": false,
+  "ecc": true
+}

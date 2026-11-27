@@ -1,0 +1,22 @@
+{
+  "id": "tr-pro-9965wx",
+  "name": "AMD Threadripper PRO 9965WX",
+  "brand": "AMD",
+  "price": 2899,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "sTR5",
+  "platform": "tr-pro-9000",
+  "memChannels": 8,
+  "memSpeed": 6400,
+  "maxMemGB": 2048,
+  "lanes": 128,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 350
+}

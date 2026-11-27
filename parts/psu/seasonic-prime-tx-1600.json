@@ -1,0 +1,12 @@
+{
+  "id": "seasonic-prime-tx-1600",
+  "name": "Seasonic Prime TX-1600 (ATX 3.1)",
+  "brand": "Seasonic",
+  "price": 529,
+  "tags": ["workstation"],
+  "form": "ATX",
+  "watts": 1600,
+  "efficiency": "Titanium",
+  "redundant": false,
+  "conn": { "eps8": 2, "pcie8": 4, "h12v": 2 }
+}

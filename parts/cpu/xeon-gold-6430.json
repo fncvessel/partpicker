@@ -1,0 +1,22 @@
+{
+  "id": "xeon-gold-6430",
+  "name": "Intel Xeon Gold 6430",
+  "brand": "Intel",
+  "price": 2128,
+  "tags": ["server"],
+  "socket": "LGA4677",
+  "platform": "xeon-sp-4",
+  "cores": 32,
+  "threads": 64,
+  "powerW": 270,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 8,
+  "memSpeed": 4400,
+  "maxMemGB": 4096,
+  "lanes": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "igpu": false,
+  "ecc": true
+}

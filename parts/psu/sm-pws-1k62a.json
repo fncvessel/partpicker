@@ -1,0 +1,12 @@
+{
+  "id": "sm-pws-1k62a",
+  "name": "Supermicro PWS-1K62A-1R 1600 W module",
+  "brand": "Supermicro",
+  "price": 350,
+  "tags": ["server"],
+  "form": "Server module",
+  "watts": 1600,
+  "efficiency": "Titanium",
+  "redundant": true,
+  "conn": null
+}

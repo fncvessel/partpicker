@@ -1,0 +1,14 @@
+{
+  "id": "corsair-ddr5-6000-2x16",
+  "name": "Corsair Vengeance DDR5-6000 32 GB (2×16)",
+  "brand": "Corsair",
+  "price": 470,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "type": "DDR5",
+  "module": "UDIMM",
+  "ecc": false,
+  "gb": 16,
+  "sticks": 2,
+  "speed": 6000
+}

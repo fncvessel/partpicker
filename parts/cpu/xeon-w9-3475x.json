@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w9-3475x",
+  "name": "Intel Xeon w9-3475X",
+  "brand": "Intel",
+  "price": 4889,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-3400",
+  "memChannels": 8,
+  "memSpeed": 4800,
+  "maxMemGB": 4096,
+  "lanes": 112,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 36,
+  "threads": 72,
+  "powerW": 300
+}

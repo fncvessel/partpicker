@@ -1,0 +1,32 @@
+{
+  "id": "gigabyte-mz73-lm0",
+  "name": "Gigabyte MZ73-LM0 (dual SP5)",
+  "brand": "Gigabyte",
+  "price": 1599,
+  "tags": ["server"],
+  "socket": "SP5",
+  "platforms": ["epyc-9004", "epyc-9005"],
+  "chipset": "SoC",
+  "formFactor": "EEB",
+  "sockets": 2,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "dimmSlots": 24,
+  "memChannels": 12,
+  "maxMemGB": 6144,
+  "pcie": [
+    { "n": 2, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 16, "gen": 5, "cpu": 2 }
+  ],
+  "m2": [{ "n": 1, "gen": 5, "cpu": 1, "sizes": ["2280", "22110"] }],
+  "sata": 0,
+  "nvmePorts": 8,
+  "ocp": 1,
+  "slotPositions": 4,
+  "eps8": 4,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 0,
+  "watts": 90
+}

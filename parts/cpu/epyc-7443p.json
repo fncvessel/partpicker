@@ -1,0 +1,23 @@
+{
+  "id": "epyc-7443p",
+  "name": "AMD EPYC 7443P",
+  "brand": "AMD",
+  "price": 1337,
+  "tags": ["server"],
+  "memTypes": ["DDR4"],
+  "memModules": ["RDIMM", "LRDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP3",
+  "platform": "epyc-7003",
+  "memChannels": 8,
+  "memSpeed": 3200,
+  "maxMemGB": 4096,
+  "lanes": 128,
+  "lanes2P": 64,
+  "pcieGen": 4,
+  "maxSockets": 1,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 200
+}

@@ -1,0 +1,13 @@
+{
+  "id": "wd-red-plus-8tb",
+  "name": "WD Red Plus 8 TB",
+  "brand": "WD",
+  "price": 189,
+  "tags": ["consumer", "server"],
+  "iface": "sata",
+  "form": "3.5\"",
+  "gen": 0,
+  "tb": 8,
+  "watts": 6,
+  "media": "HDD"
+}

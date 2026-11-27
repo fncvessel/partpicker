@@ -1,0 +1,16 @@
+{
+  "id": "cx6-lx-ocp3",
+  "name": "NVIDIA ConnectX-6 Lx 2×25G (OCP 3.0)",
+  "brand": "NVIDIA",
+  "price": 400,
+  "tags": ["server"],
+  "form": "ocp3",
+  "speedG": 25,
+  "ports": 2,
+  "gen": 4,
+  "lanes": 8,
+  "size": 8,
+  "watts": 12,
+  "widthSlots": 0,
+  "lowProfile": true
+}

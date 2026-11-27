@@ -1,0 +1,24 @@
+name: Check parts and tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate part files
+        run: node scripts/validate-parts.js
+      - name: Run tests
+        run: node --test test/*.test.js
+      - name: Build site
+        run: node build.js

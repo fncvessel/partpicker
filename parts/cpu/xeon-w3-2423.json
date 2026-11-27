@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w3-2423",
+  "name": "Intel Xeon w3-2423",
+  "brand": "Intel",
+  "price": 359,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-2400",
+  "memChannels": 4,
+  "memSpeed": 4400,
+  "maxMemGB": 2048,
+  "lanes": 64,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 6,
+  "threads": 12,
+  "powerW": 120
+}

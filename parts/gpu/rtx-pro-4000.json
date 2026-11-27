@@ -1,0 +1,17 @@
+{
+  "id": "rtx-pro-4000",
+  "name": "NVIDIA RTX PRO 4000 Blackwell",
+  "brand": "NVIDIA",
+  "price": 1800,
+  "tags": ["workstation"],
+  "vramGB": 24,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 1,
+  "lengthMm": 241,
+  "powerW": 140,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

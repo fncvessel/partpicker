@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w7-2475x",
+  "name": "Intel Xeon w7-2475X",
+  "brand": "Intel",
+  "price": 1789,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-2400",
+  "memChannels": 4,
+  "memSpeed": 4800,
+  "maxMemGB": 2048,
+  "lanes": 64,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 20,
+  "threads": 40,
+  "powerW": 225
+}

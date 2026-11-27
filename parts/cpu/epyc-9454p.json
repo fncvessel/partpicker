@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9454p",
+  "name": "AMD EPYC 9454P",
+  "brand": "AMD",
+  "price": 4598,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP5",
+  "platform": "epyc-9004",
+  "memChannels": 12,
+  "memSpeed": 4800,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 48,
+  "threads": 96,
+  "powerW": 290
+}

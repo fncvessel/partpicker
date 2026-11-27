@@ -1,0 +1,13 @@
+{
+  "id": "kioxia-cd8p-7.68",
+  "name": "Kioxia CD8P-R 7.68 TB U.2 (Gen5)",
+  "brand": "Kioxia",
+  "price": 1700,
+  "tags": ["server"],
+  "iface": "u2",
+  "form": "2.5\"",
+  "gen": 5,
+  "tb": 7.68,
+  "watts": 24,
+  "media": "SSD"
+}

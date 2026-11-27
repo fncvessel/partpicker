@@ -1,0 +1,13 @@
+{
+  "id": "samsung-pm1643a-3.84",
+  "name": "Samsung PM1643a 3.84 TB SAS SSD",
+  "brand": "Samsung",
+  "price": 900,
+  "tags": ["server"],
+  "iface": "sas",
+  "form": "2.5\"",
+  "gen": 0,
+  "tb": 3.84,
+  "watts": 9,
+  "media": "SSD"
+}

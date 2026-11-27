@@ -1,0 +1,18 @@
+{
+  "id": "generic-2u-e3s",
+  "name": "2U EDSFF chassis (24× E3.S)",
+  "brand": "Generic",
+  "price": 2200,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 2,
+  "boards": ["ATX", "E-ATX", "EEB"],
+  "psuForms": ["Server module"],
+  "gpuMaxMm": 170,
+  "coolerMaxMm": 64,
+  "radMm": 0,
+  "slots": 4,
+  "lowProfileOnly": true,
+  "airflow": "server",
+  "bays": { "e3s": 24 }
+}

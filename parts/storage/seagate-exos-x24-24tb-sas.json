@@ -1,0 +1,13 @@
+{
+  "id": "seagate-exos-x24-24tb-sas",
+  "name": "Seagate Exos X24 24 TB SAS",
+  "brand": "Seagate",
+  "price": 449,
+  "tags": ["server"],
+  "iface": "sas",
+  "form": "3.5\"",
+  "gen": 0,
+  "tb": 24,
+  "watts": 10,
+  "media": "HDD"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "samsung-pm9a3-1.92-m2",
+  "name": "Samsung PM9A3 1.92 TB (M.2 22110)",
+  "brand": "Samsung",
+  "price": 250,
+  "tags": ["server"],
+  "iface": "m2",
+  "form": "M.2 22110",
+  "gen": 4,
+  "tb": 1.92,
+  "watts": 8,
+  "media": "SSD"
+}

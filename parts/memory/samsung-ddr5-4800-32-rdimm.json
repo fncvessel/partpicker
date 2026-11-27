@@ -1,0 +1,14 @@
+{
+  "id": "samsung-ddr5-4800-32-rdimm",
+  "name": "Samsung DDR5-4800 32 GB RDIMM",
+  "brand": "Samsung",
+  "price": 1012,
+  "priceChecked": true,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 4800
+}

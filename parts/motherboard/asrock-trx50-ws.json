@@ -1,0 +1,32 @@
+{
+  "id": "asrock-trx50-ws",
+  "name": "ASRock TRX50 WS",
+  "brand": "ASRock",
+  "price": 799,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "ocp": 0,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 70,
+  "socket": "sTR5",
+  "platforms": ["tr-7000", "tr-9000", "tr-pro-7000", "tr-pro-9000"],
+  "chipset": "TRX50",
+  "formFactor": "E-ATX",
+  "dimmSlots": 4,
+  "memChannels": 4,
+  "maxMemGB": 1024,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 16, "gen": 4, "cpu": 1 }
+  ],
+  "m2": [{ "n": 2, "gen": 5, "cpu": 1, "sizes": ["2280"] }, { "n": 1, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "slotPositions": 7,
+  "eps8": 2
+}

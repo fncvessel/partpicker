@@ -1,0 +1,13 @@
+{
+  "id": "kioxia-xd7p-3.84",
+  "name": "Kioxia XD7P 3.84 TB E1.S",
+  "brand": "Kioxia",
+  "price": 600,
+  "tags": ["server"],
+  "iface": "e1s",
+  "form": "E1.S",
+  "gen": 4,
+  "tb": 3.84,
+  "watts": 12,
+  "media": "SSD"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "tr-3960x",
+  "name": "AMD Ryzen Threadripper 3960X",
+  "brand": "AMD",
+  "price": 550,
+  "tags": ["workstation"],
+  "memTypes": ["DDR4"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "maxSockets": 1,
+  "socket": "sTRX4",
+  "platform": "tr-3000",
+  "memChannels": 4,
+  "memSpeed": 3200,
+  "maxMemGB": 256,
+  "lanes": 72,
+  "pcieGen": 4,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 280
+}

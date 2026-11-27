@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9355p",
+  "name": "AMD EPYC 9355P",
+  "brand": "AMD",
+  "price": 2998,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP5",
+  "platform": "epyc-9005",
+  "memChannels": 12,
+  "memSpeed": 6000,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 32,
+  "threads": 64,
+  "powerW": 280
+}

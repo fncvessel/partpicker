@@ -1,0 +1,17 @@
+{
+  "id": "nvidia-h100-nvl",
+  "name": "NVIDIA H100 NVL",
+  "brand": "NVIDIA",
+  "price": 29000,
+  "tags": ["server"],
+  "vramGB": 94,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 400,
+  "conn": { "h12v": 1 },
+  "cooling": "passive",
+  "lowProfile": false
+}

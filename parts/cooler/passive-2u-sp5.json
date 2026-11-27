@@ -1,0 +1,11 @@
+{
+  "id": "passive-2u-sp5",
+  "name": "2U passive heatsink (SP5)",
+  "brand": "Generic",
+  "price": 90,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["SP5"],
+  "heightMm": 64,
+  "ratedW": 400
+}

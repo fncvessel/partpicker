@@ -1,0 +1,47 @@
+name: Add or fix a part
+description: Suggest a part for the catalog (no coding needed).
+title: "Add part: "
+labels: ["part request"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [CPU, CPU cooler, Motherboard, Memory, GPU / accelerator, Storage, Storage controller, Network, Power supply, Case / chassis]
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Full part name
+      placeholder: e.g. ASUS Pro WS WRX80E-SAGE SE WiFi
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Spec sheet or product page link
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: Current price in USD (and where you saw it)
+      placeholder: e.g. $649 at Newegg, Nov 2026
+  - type: textarea
+    id: specs
+    attributes:
+      label: Key specs
+      description: Whatever matters for compatibility. For example, socket, memory type and slots, PCIe slots (size, lanes, gen), power draw, dimensions, connectors.
+      placeholder: |
+        Socket: sWRX8
+        Memory: 8x DDR4 RDIMM/LRDIMM, 8 channels, up to 2 TB
+        PCIe: 7x x16 Gen4 (all CPU)
+        M.2: 2x Gen4 (22110)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything the checker should know?
+      description: Quirks like BIOS updates needed, lanes shared between slots, needs server airflow, and so on.

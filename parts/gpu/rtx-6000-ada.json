@@ -1,0 +1,17 @@
+{
+  "id": "rtx-6000-ada",
+  "name": "NVIDIA RTX 6000 Ada",
+  "brand": "NVIDIA",
+  "price": 6800,
+  "tags": ["workstation"],
+  "vramGB": 48,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

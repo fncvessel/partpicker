@@ -1,0 +1,22 @@
+{
+  "id": "epyc-9354p",
+  "name": "AMD EPYC 9354P",
+  "brand": "AMD",
+  "price": 2730,
+  "tags": ["server"],
+  "socket": "SP5",
+  "platform": "epyc-9004",
+  "cores": 32,
+  "threads": 64,
+  "powerW": 280,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 12,
+  "memSpeed": 4800,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": false,
+  "ecc": true
+}

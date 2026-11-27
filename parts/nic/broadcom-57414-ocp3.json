@@ -1,0 +1,16 @@
+{
+  "id": "broadcom-57414-ocp3",
+  "name": "Broadcom BCM57414 2×25G (OCP 3.0)",
+  "brand": "Broadcom",
+  "price": 350,
+  "tags": ["server"],
+  "form": "ocp3",
+  "speedG": 25,
+  "ports": 2,
+  "gen": 3,
+  "lanes": 8,
+  "size": 8,
+  "watts": 10,
+  "widthSlots": 0,
+  "lowProfile": true
+}

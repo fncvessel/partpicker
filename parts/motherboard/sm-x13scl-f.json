@@ -1,0 +1,32 @@
+{
+  "id": "sm-x13scl-f",
+  "name": "Supermicro X13SCL-F",
+  "brand": "Supermicro",
+  "price": 329,
+  "tags": ["server"],
+  "socket": "LGA1700",
+  "platforms": ["xeon-e-2400"],
+  "chipset": "C262",
+  "formFactor": "mATX",
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "dimmSlots": 4,
+  "memChannels": 2,
+  "maxMemGB": 128,
+  "pcie": [
+    { "n": 1, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 8, "lanes": 4, "gen": 4, "cpu": "pch" }
+  ],
+  "m2": [{ "n": 2, "gen": 4, "cpu": "pch", "sizes": ["2280", "22110"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "ocp": 0,
+  "slotPositions": 4,
+  "eps8": 1,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 12,
+  "watts": 35
+}

@@ -1,0 +1,11 @@
+{
+  "id": "passive-1u-4677",
+  "name": "1U passive heatsink (LGA4677)",
+  "brand": "Generic",
+  "price": 60,
+  "tags": ["server"],
+  "type": "passive",
+  "sockets": ["LGA4677"],
+  "heightMm": 27,
+  "ratedW": 205
+}

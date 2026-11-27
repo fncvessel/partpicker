@@ -1,0 +1,16 @@
+{
+  "id": "intel-e810-cqda2",
+  "name": "Intel E810-CQDA2 2×100G",
+  "brand": "Intel",
+  "price": 900,
+  "tags": ["server"],
+  "form": "pcie",
+  "speedG": 100,
+  "ports": 2,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "watts": 20,
+  "widthSlots": 1,
+  "lowProfile": true
+}

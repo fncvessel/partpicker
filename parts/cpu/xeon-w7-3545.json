@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w7-3545",
+  "name": "Intel Xeon w7-3545",
+  "brand": "Intel",
+  "price": 2389,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-3500",
+  "memChannels": 8,
+  "memSpeed": 5600,
+  "maxMemGB": 4096,
+  "lanes": 112,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 24,
+  "threads": 48,
+  "powerW": 300
+}

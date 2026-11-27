@@ -1,0 +1,16 @@
+{
+  "id": "cx6-dx-100g",
+  "name": "NVIDIA ConnectX-6 Dx 2×100G",
+  "brand": "NVIDIA",
+  "price": 1200,
+  "tags": ["server", "workstation"],
+  "form": "pcie",
+  "speedG": 100,
+  "ports": 2,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "watts": 20,
+  "widthSlots": 1,
+  "lowProfile": true
+}

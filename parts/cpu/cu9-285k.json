@@ -1,0 +1,23 @@
+{
+  "id": "cu9-285k",
+  "name": "Intel Core Ultra 9 285K",
+  "brand": "Intel",
+  "price": 399,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "socket": "LGA1851",
+  "platform": "arrow-lake",
+  "cores": 24,
+  "threads": 24,
+  "powerW": 250,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 6400,
+  "maxMemGB": 256,
+  "lanes": 24,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}

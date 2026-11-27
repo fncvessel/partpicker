@@ -1,0 +1,23 @@
+{
+  "id": "epyc-7543",
+  "name": "AMD EPYC 7543",
+  "brand": "AMD",
+  "price": 3761,
+  "tags": ["server"],
+  "socket": "SP3",
+  "platform": "epyc-7003",
+  "cores": 32,
+  "threads": 64,
+  "powerW": 225,
+  "memTypes": ["DDR4"],
+  "memModules": ["RDIMM", "LRDIMM"],
+  "memChannels": 8,
+  "memSpeed": 3200,
+  "maxMemGB": 4096,
+  "lanes": 128,
+  "lanes2P": 64,
+  "pcieGen": 4,
+  "maxSockets": 2,
+  "igpu": false,
+  "ecc": true
+}

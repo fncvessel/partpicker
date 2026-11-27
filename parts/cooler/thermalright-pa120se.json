@@ -1,0 +1,11 @@
+{
+  "id": "thermalright-pa120se",
+  "name": "Thermalright Peerless Assassin 120 SE",
+  "brand": "Thermalright",
+  "price": 35,
+  "tags": ["consumer"],
+  "type": "air",
+  "sockets": ["AM5", "AM4", "LGA1700", "LGA1851", "LGA1200"],
+  "heightMm": 155,
+  "ratedW": 245
+}

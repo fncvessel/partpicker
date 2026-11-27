@@ -1,0 +1,33 @@
+{
+  "id": "msi-z790-a-ddr4",
+  "name": "MSI PRO Z790-A WiFi DDR4",
+  "brand": "MSI",
+  "price": 199,
+  "tags": ["consumer"],
+  "socket": "LGA1700",
+  "platforms": ["core-12-14"],
+  "chipset": "Z790",
+  "formFactor": "ATX",
+  "sockets": 1,
+  "memType": "DDR4",
+  "memModules": ["UDIMM"],
+  "ecc": false,
+  "dimmSlots": 4,
+  "memChannels": 2,
+  "maxMemGB": 128,
+  "pcie": [
+    { "n": 1, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 4, "gen": 4, "cpu": "pch" },
+    { "n": 1, "size": 1, "lanes": 1, "gen": 3, "cpu": "pch" }
+  ],
+  "m2": [{ "n": 1, "gen": 4, "cpu": 1, "sizes": ["2280"] }, { "n": 3, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 6,
+  "nvmePorts": 0,
+  "ocp": 0,
+  "slotPositions": 7,
+  "eps8": 2,
+  "bmc": false,
+  "bifurcation": false,
+  "chipsetLanes": 20,
+  "watts": 40
+}

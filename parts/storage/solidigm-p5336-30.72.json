@@ -1,0 +1,13 @@
+{
+  "id": "solidigm-p5336-30.72",
+  "name": "Solidigm D5-P5336 30.72 TB U.2 (QLC)",
+  "brand": "Solidigm",
+  "price": 5500,
+  "tags": ["server"],
+  "iface": "u2",
+  "form": "2.5\"",
+  "gen": 4,
+  "tb": 30.72,
+  "watts": 25,
+  "media": "SSD"
+}

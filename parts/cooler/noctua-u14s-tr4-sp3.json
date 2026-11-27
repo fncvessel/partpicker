@@ -1,0 +1,11 @@
+{
+  "id": "noctua-u14s-tr4-sp3",
+  "name": "Noctua NH-U14S TR4-SP3",
+  "brand": "Noctua",
+  "price": 89,
+  "tags": ["server", "workstation"],
+  "type": "air",
+  "sockets": ["SP3", "TR4", "sTRX4", "sWRX8"],
+  "heightMm": 165,
+  "ratedW": 280
+}

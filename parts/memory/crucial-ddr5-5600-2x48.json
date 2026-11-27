@@ -1,0 +1,13 @@
+{
+  "id": "crucial-ddr5-5600-2x48",
+  "name": "Crucial DDR5-5600 96 GB (2×48)",
+  "brand": "Crucial",
+  "price": 1860,
+  "tags": ["consumer", "workstation"],
+  "type": "DDR5",
+  "module": "UDIMM",
+  "ecc": false,
+  "gb": 48,
+  "sticks": 2,
+  "speed": 5600
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtx-5000-ada",
+  "name": "NVIDIA RTX 5000 Ada",
+  "brand": "NVIDIA",
+  "price": 4600,
+  "tags": ["workstation"],
+  "vramGB": 32,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 250,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

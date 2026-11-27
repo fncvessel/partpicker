@@ -1,0 +1,16 @@
+{
+  "id": "lianli-o11d-evo",
+  "name": "Lian Li O11 Dynamic EVO",
+  "brand": "Lian Li",
+  "price": 169,
+  "tags": ["consumer", "workstation"],
+  "kind": "tower",
+  "boards": ["ITX", "mATX", "ATX", "CEB", "E-ATX"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 422,
+  "coolerMaxMm": 167,
+  "radMm": 360,
+  "slots": 7,
+  "airflow": "standard",
+  "bays": { "3.5": 2, "2.5": 4 }
+}

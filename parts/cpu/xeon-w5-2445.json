@@ -1,0 +1,22 @@
+{
+  "id": "xeon-w5-2445",
+  "name": "Intel Xeon w5-2445",
+  "brand": "Intel",
+  "price": 889,
+  "tags": ["workstation"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-w-2400",
+  "memChannels": 4,
+  "memSpeed": 4800,
+  "maxMemGB": 2048,
+  "lanes": 64,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 10,
+  "threads": 20,
+  "powerW": 175
+}

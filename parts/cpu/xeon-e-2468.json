@@ -1,0 +1,22 @@
+{
+  "id": "xeon-e-2468",
+  "name": "Intel Xeon E-2468",
+  "brand": "Intel",
+  "price": 485,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA1700",
+  "platform": "xeon-e-2400",
+  "memChannels": 2,
+  "memSpeed": 4800,
+  "maxMemGB": 128,
+  "lanes": 16,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 8,
+  "threads": 16,
+  "powerW": 65
+}

@@ -1,0 +1,22 @@
+{
+  "id": "xeon-silver-4416p",
+  "name": "Intel Xeon Silver 4416+",
+  "brand": "Intel",
+  "price": 1176,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "LGA4677",
+  "platform": "xeon-sp-4",
+  "memChannels": 8,
+  "memSpeed": 4000,
+  "maxMemGB": 4096,
+  "lanes": 80,
+  "pcieGen": 5,
+  "maxSockets": 2,
+  "cores": 20,
+  "threads": 40,
+  "powerW": 165
+}

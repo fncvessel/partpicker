@@ -1,0 +1,14 @@
+{
+  "id": "crucial-t705-2tb",
+  "name": "Crucial T705 2 TB",
+  "brand": "Crucial",
+  "price": 399,
+  "priceChecked": true,
+  "tags": ["consumer", "workstation"],
+  "iface": "m2",
+  "form": "M.2 2280",
+  "gen": 5,
+  "tb": 2,
+  "watts": 10,
+  "media": "SSD"
+}

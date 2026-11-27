@@ -1,0 +1,13 @@
+{
+  "id": "samsung-ddr5-5600-128-rdimm",
+  "name": "Samsung DDR5-5600 128 GB RDIMM (3DS)",
+  "brand": "Samsung",
+  "price": 5600,
+  "tags": ["server", "workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 128,
+  "sticks": 1,
+  "speed": 5600
+}

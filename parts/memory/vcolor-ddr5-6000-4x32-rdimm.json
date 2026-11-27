@@ -1,0 +1,13 @@
+{
+  "id": "vcolor-ddr5-6000-4x32-rdimm",
+  "name": "V-Color DDR5-6000 128 GB (4×32) OC RDIMM",
+  "brand": "V-Color",
+  "price": 4300,
+  "tags": ["workstation"],
+  "type": "DDR5",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 4,
+  "speed": 6000
+}

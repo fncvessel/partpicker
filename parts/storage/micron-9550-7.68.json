@@ -1,0 +1,13 @@
+{
+  "id": "micron-9550-7.68",
+  "name": "Micron 9550 PRO 7.68 TB U.2 (Gen5)",
+  "brand": "Micron",
+  "price": 2100,
+  "tags": ["server"],
+  "iface": "u2",
+  "form": "2.5\"",
+  "gen": 5,
+  "tb": 7.68,
+  "watts": 25,
+  "media": "SSD"
+}

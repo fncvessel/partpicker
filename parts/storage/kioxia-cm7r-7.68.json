@@ -1,0 +1,13 @@
+{
+  "id": "kioxia-cm7r-7.68",
+  "name": "Kioxia CM7-R 7.68 TB E3.S",
+  "brand": "Kioxia",
+  "price": 1500,
+  "tags": ["server"],
+  "iface": "e3s",
+  "form": "E3.S",
+  "gen": 5,
+  "tb": 7.68,
+  "watts": 24,
+  "media": "SSD"
+}

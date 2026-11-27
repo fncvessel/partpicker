@@ -1,0 +1,17 @@
+{
+  "id": "silverstone-rm43-320",
+  "name": "SilverStone RM43-320-RS (4U, 20× 3.5\" hot-swap)",
+  "brand": "SilverStone",
+  "price": 649,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["mATX", "ATX", "CEB", "E-ATX", "EEB"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 280,
+  "coolerMaxMm": 145,
+  "radMm": 0,
+  "slots": 7,
+  "airflow": "server",
+  "bays": { "3.5": 20 }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "tr-3970x",
+  "name": "AMD Ryzen Threadripper 3970X",
+  "brand": "AMD",
+  "price": 800,
+  "tags": ["workstation"],
+  "memTypes": ["DDR4"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "maxSockets": 1,
+  "socket": "sTRX4",
+  "platform": "tr-3000",
+  "memChannels": 4,
+  "memSpeed": 3200,
+  "maxMemGB": 256,
+  "lanes": 72,
+  "pcieGen": 4,
+  "cores": 32,
+  "threads": 64,
+  "powerW": 280
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rosewill-rsv-l4500u",
+  "name": "Rosewill RSV-L4500U (4U, 15× 3.5\")",
+  "brand": "Rosewill",
+  "price": 199,
+  "tags": ["server"],
+  "kind": "rack",
+  "ru": 4,
+  "boards": ["mATX", "ATX", "E-ATX"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 300,
+  "coolerMaxMm": 160,
+  "radMm": 0,
+  "slots": 7,
+  "airflow": "server",
+  "bays": { "3.5": 15 }
+}

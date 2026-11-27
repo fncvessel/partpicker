@@ -1,0 +1,22 @@
+{
+  "id": "tr-9970x",
+  "name": "AMD Threadripper 9970X",
+  "brand": "AMD",
+  "price": 2499,
+  "tags": ["workstation"],
+  "socket": "sTR5",
+  "platform": "tr-9000",
+  "cores": 32,
+  "threads": 64,
+  "powerW": 350,
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "memChannels": 4,
+  "memSpeed": 6400,
+  "maxMemGB": 1024,
+  "lanes": 88,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": false,
+  "ecc": true
+}

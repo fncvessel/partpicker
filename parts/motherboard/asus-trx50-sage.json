@@ -1,0 +1,33 @@
+{
+  "id": "asus-trx50-sage",
+  "name": "ASUS Pro WS TRX50-SAGE WiFi",
+  "brand": "ASUS",
+  "price": 899,
+  "tags": ["workstation"],
+  "socket": "sTR5",
+  "platforms": ["tr-7000", "tr-9000", "tr-pro-7000", "tr-pro-9000"],
+  "chipset": "TRX50",
+  "formFactor": "CEB",
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "dimmSlots": 4,
+  "memChannels": 4,
+  "maxMemGB": 1024,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 8, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 4, "gen": 4, "cpu": "pch" }
+  ],
+  "m2": [{ "n": 2, "gen": 5, "cpu": 1, "sizes": ["2280"] }, { "n": 1, "gen": 4, "cpu": "pch", "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 0,
+  "ocp": 0,
+  "slotPositions": 7,
+  "eps8": 2,
+  "bmc": false,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 60
+}

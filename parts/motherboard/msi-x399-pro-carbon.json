@@ -1,0 +1,35 @@
+{
+  "id": "msi-x399-pro-carbon",
+  "name": "MSI X399 Gaming Pro Carbon AC",
+  "brand": "MSI",
+  "price": 180,
+  "tags": ["workstation"],
+  "sockets": 1,
+  "memType": "DDR4",
+  "ecc": true,
+  "ocp": 0,
+  "nvmePorts": 0,
+  "bmc": false,
+  "bifurcation": true,
+  "watts": 60,
+  "eps8": 2,
+  "socket": "TR4",
+  "platforms": ["tr-1000-2000"],
+  "chipset": "X399",
+  "memModules": ["UDIMM"],
+  "dimmSlots": 8,
+  "memChannels": 4,
+  "maxMemGB": 512,
+  "chipsetLanes": 8,
+  "formFactor": "ATX",
+  "pcie": [
+    { "n": 2, "size": 16, "lanes": 16, "gen": 3, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 8, "gen": 3, "cpu": 1 }
+  ],
+  "m2": [
+    { "n": 2, "gen": 3, "cpu": 1, "sizes": ["2280", "22110"] },
+    { "n": 1, "gen": 3, "cpu": 1, "sizes": ["2280"] }
+  ],
+  "sata": 8,
+  "slotPositions": 7
+}

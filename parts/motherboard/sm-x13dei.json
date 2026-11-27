@@ -1,0 +1,33 @@
+{
+  "id": "sm-x13dei",
+  "name": "Supermicro X13DEI",
+  "brand": "Supermicro",
+  "price": 949,
+  "tags": ["server"],
+  "socket": "LGA4677",
+  "platforms": ["xeon-sp-4", "xeon-sp-5"],
+  "chipset": "C741",
+  "formFactor": "EEB",
+  "sockets": 2,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "dimmSlots": 16,
+  "memChannels": 8,
+  "maxMemGB": 4096,
+  "pcie": [
+    { "n": 3, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 2, "size": 16, "lanes": 16, "gen": 5, "cpu": 2 },
+    { "n": 1, "size": 8, "lanes": 8, "gen": 5, "cpu": 2 }
+  ],
+  "m2": [{ "n": 2, "gen": 3, "cpu": "pch", "sizes": ["2280", "22110"] }],
+  "sata": 10,
+  "nvmePorts": 4,
+  "ocp": 0,
+  "slotPositions": 7,
+  "eps8": 3,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 90
+}

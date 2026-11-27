@@ -1,0 +1,13 @@
+{
+  "id": "samsung-ddr4-3200-32-rdimm",
+  "name": "Samsung DDR4-3200 32 GB RDIMM",
+  "brand": "Samsung",
+  "price": 320,
+  "tags": ["server"],
+  "type": "DDR4",
+  "module": "RDIMM",
+  "ecc": true,
+  "gb": 32,
+  "sticks": 1,
+  "speed": 3200
+}

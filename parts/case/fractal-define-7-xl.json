@@ -1,0 +1,16 @@
+{
+  "id": "fractal-define-7-xl",
+  "name": "Fractal Design Define 7 XL",
+  "brand": "Fractal",
+  "price": 239,
+  "tags": ["workstation", "server"],
+  "kind": "tower",
+  "boards": ["ITX", "mATX", "ATX", "CEB", "E-ATX", "EEB"],
+  "psuForms": ["ATX"],
+  "gpuMaxMm": 440,
+  "coolerMaxMm": 185,
+  "radMm": 420,
+  "slots": 9,
+  "airflow": "standard",
+  "bays": { "3.5": 18, "2.5": 5 }
+}

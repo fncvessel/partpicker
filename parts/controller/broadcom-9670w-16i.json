@@ -1,0 +1,16 @@
+{
+  "id": "broadcom-9670w-16i",
+  "name": "Broadcom MegaRAID 9670W-16i",
+  "brand": "Broadcom",
+  "price": 1700,
+  "tags": ["server"],
+  "kind": "RAID",
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "sasPorts": 16,
+  "nvmePorts": 4,
+  "watts": 25,
+  "widthSlots": 1,
+  "lowProfile": false
+}

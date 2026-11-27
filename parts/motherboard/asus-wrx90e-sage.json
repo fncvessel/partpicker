@@ -1,0 +1,32 @@
+{
+  "id": "asus-wrx90e-sage",
+  "name": "ASUS Pro WS WRX90E-SAGE SE",
+  "brand": "ASUS",
+  "price": 1299,
+  "tags": ["workstation"],
+  "socket": "sTR5",
+  "platforms": ["tr-pro-7000", "tr-pro-9000"],
+  "chipset": "WRX90",
+  "formFactor": "EEB",
+  "sockets": 1,
+  "memType": "DDR5",
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "dimmSlots": 8,
+  "memChannels": 8,
+  "maxMemGB": 2048,
+  "pcie": [
+    { "n": 6, "size": 16, "lanes": 16, "gen": 5, "cpu": 1 },
+    { "n": 1, "size": 16, "lanes": 8, "gen": 5, "cpu": 1 }
+  ],
+  "m2": [{ "n": 4, "gen": 5, "cpu": 1, "sizes": ["2280"] }],
+  "sata": 4,
+  "nvmePorts": 2,
+  "ocp": 0,
+  "slotPositions": 7,
+  "eps8": 2,
+  "bmc": true,
+  "bifurcation": true,
+  "chipsetLanes": 8,
+  "watts": 70
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtx-4500-ada",
+  "name": "NVIDIA RTX 4500 Ada",
+  "brand": "NVIDIA",
+  "price": 2600,
+  "tags": ["workstation"],
+  "vramGB": 24,
+  "gen": 4,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 210,
+  "conn": { "pcie8": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

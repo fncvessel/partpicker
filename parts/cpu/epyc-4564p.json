@@ -1,0 +1,22 @@
+{
+  "id": "epyc-4564p",
+  "name": "AMD EPYC 4564P",
+  "brand": "AMD",
+  "price": 699,
+  "tags": ["server"],
+  "socket": "AM5",
+  "platform": "am5",
+  "cores": 16,
+  "threads": 32,
+  "powerW": 230,
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 5200,
+  "maxMemGB": 192,
+  "lanes": 28,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}

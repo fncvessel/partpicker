@@ -1,0 +1,17 @@
+{
+  "id": "rtx-pro-6000-maxq",
+  "name": "NVIDIA RTX PRO 6000 Blackwell Max-Q",
+  "brand": "NVIDIA",
+  "price": 16000,
+  "tags": ["workstation"],
+  "vramGB": 96,
+  "gen": 5,
+  "lanes": 16,
+  "size": 16,
+  "widthSlots": 2,
+  "lengthMm": 267,
+  "powerW": 300,
+  "conn": { "h12v": 1 },
+  "cooling": "blower",
+  "lowProfile": false
+}

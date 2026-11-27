@@ -1,0 +1,12 @@
+{
+  "id": "corsair-rm850x",
+  "name": "Corsair RM850x (ATX 3.1)",
+  "brand": "Corsair",
+  "price": 139,
+  "tags": ["consumer"],
+  "form": "ATX",
+  "watts": 850,
+  "efficiency": "Gold",
+  "redundant": false,
+  "conn": { "eps8": 2, "pcie8": 4, "h12v": 1 }
+}

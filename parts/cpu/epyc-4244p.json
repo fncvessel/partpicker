@@ -1,0 +1,22 @@
+{
+  "id": "epyc-4244p",
+  "name": "AMD EPYC 4244P",
+  "brand": "AMD",
+  "price": 229,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["UDIMM"],
+  "ecc": true,
+  "igpu": true,
+  "socket": "AM5",
+  "platform": "am5",
+  "memChannels": 2,
+  "memSpeed": 5200,
+  "maxMemGB": 192,
+  "lanes": 28,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 6,
+  "threads": 12,
+  "powerW": 88
+}

@@ -1,0 +1,23 @@
+{
+  "id": "epyc-9655p",
+  "name": "AMD EPYC 9655P",
+  "brand": "AMD",
+  "price": 10811,
+  "tags": ["server"],
+  "memTypes": ["DDR5"],
+  "memModules": ["RDIMM"],
+  "ecc": true,
+  "igpu": false,
+  "socket": "SP5",
+  "platform": "epyc-9005",
+  "memChannels": 12,
+  "memSpeed": 6000,
+  "maxMemGB": 6144,
+  "lanes": 128,
+  "lanes2P": 80,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "cores": 96,
+  "threads": 192,
+  "powerW": 400
+}

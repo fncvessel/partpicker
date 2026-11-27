@@ -1,0 +1,16 @@
+{
+  "id": "cm-nr200p",
+  "name": "Cooler Master NR200P",
+  "brand": "Cooler Master",
+  "price": 109,
+  "tags": ["consumer"],
+  "kind": "tower",
+  "boards": ["ITX"],
+  "psuForms": ["SFX"],
+  "gpuMaxMm": 330,
+  "coolerMaxMm": 155,
+  "radMm": 280,
+  "slots": 3,
+  "airflow": "standard",
+  "bays": { "3.5": 1, "2.5": 3 }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "i5-14600k",
+  "name": "Intel Core i5-14600K",
+  "brand": "Intel",
+  "price": 249,
+  "priceChecked": true,
+  "tags": ["consumer"],
+  "socket": "LGA1700",
+  "platform": "core-12-14",
+  "cores": 14,
+  "threads": 20,
+  "powerW": 181,
+  "memTypes": ["DDR4", "DDR5"],
+  "memModules": ["UDIMM"],
+  "memChannels": 2,
+  "memSpeed": 5600,
+  "maxMemGB": 192,
+  "lanes": 20,
+  "pcieGen": 5,
+  "maxSockets": 1,
+  "igpu": true,
+  "ecc": true
+}
