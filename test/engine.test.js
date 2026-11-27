@@ -77,3 +77,12 @@ test('checkCandidate explains why a part does not fit', () => {
   const good = checkCandidate(build, parts.find((p) => p.id === 'r9-9950x'), parts);
   assert.strictEqual(good.ok, true, good.reasons.join(' | '));
 });
+
+test('server lineups: SP6 build is clean, 1P-only parts refuse 2S boards', () => {
+  const r = ev([{ id: 'epyc-8434p', qty: 1 }, { id: 'gigabyte-me33-ar0', qty: 1 }, { id: 'samsung-ddr5-4800-32-rdimm', qty: 6 },
+    { id: 'noctua-d9-tr5-sp6', qty: 1 }, { id: 'micron-7450-pro-3.84', qty: 4 }, { id: 'phanteks-pro2-server', qty: 1 }, { id: 'seasonic-focus-gx-1000', qty: 1 }]);
+  assert.deepStrictEqual(r.issues.filter((i) => i.level === 'error'), []);
+  assert.ok(rules(ev([{ id: 'xeon-gold-5512u', qty: 2 }, { id: 'asus-z13pe-d16', qty: 1 }]), 'error').includes('cpu-maxsockets'));
+  assert.ok(rules(ev([{ id: 'xeon-w9-3595x', qty: 1 }, { id: 'sm-x13sei-f', qty: 1 }]), 'error').includes('cpu-platform'));
+  assert.strictEqual(parts.find((p) => p.id === 'epyc-9754s').threads, 128);
+});
