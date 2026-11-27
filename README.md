@@ -1,6 +1,6 @@
 # Slotwise
 
-A PC build planner that covers consumer, workstation and server hardware, with a rules-based compatibility checker.
+A PC build planner that covers consumer, workstation and server hardware, with a rules-based compatibility checker. Simple and easy to use, with new parts being added all the time.
 
 - `parts/<category>/<id>.json` – the hand-checked catalog, one file per part (see [CONTRIBUTING.md](CONTRIBUTING.md) to add one); `parts/_presets.json` holds the starter builds
 - `src/catalog.js` – loads the part files and merges in the bulk import
