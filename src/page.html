@@ -1,0 +1,55 @@
+<title>Slotwise</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>/*STYLES*/</style>
+<header class="top">
+  <h1>Slotwise</h1>
+  <div class="top-actions">
+    <label class="sr" for="preset">Load a starting build</label>
+    <select id="preset"></select>
+    <button type="button" id="btn-io">Export / import</button>
+  </div>
+</header>
+<main class="layout">
+  <section class="build" aria-label="Build">
+    <label class="sr" for="build-name">Build name</label>
+    <input id="build-name" class="build-name" type="text" autocomplete="off" spellcheck="false">
+    <div id="rows"></div>
+  </section>
+  <aside class="report" id="report" aria-live="polite"></aside>
+</main>
+<dialog id="picker" aria-labelledby="pick-title">
+  <div class="dlg-head">
+    <h2 id="pick-title">Parts</h2>
+    <button type="button" class="icon-btn" data-act="close" aria-label="Close">×</button>
+  </div>
+  <div class="pick-tools">
+    <label class="sr" for="pick-q">Search parts</label>
+    <input id="pick-q" type="search" placeholder="Search name, socket, spec…" autocomplete="off">
+    <div class="seg" role="group" aria-label="Segment">
+      <button type="button" data-seg="all">All</button>
+      <button type="button" data-seg="consumer">Consumer</button>
+      <button type="button" data-seg="workstation">Workstation</button>
+      <button type="button" data-seg="server">Server</button>
+    </div>
+    <label class="check"><input id="pick-ok" type="checkbox" checked> Only compatible <span id="pick-hidden" class="muted"></span></label>
+  </div>
+  <ul id="pick-list" class="pick-list"></ul>
+</dialog>
+<dialog id="io" aria-labelledby="io-title">
+  <div class="dlg-head">
+    <h2 id="io-title">Export / import</h2>
+    <button type="button" class="icon-btn" data-act="close" aria-label="Close">×</button>
+  </div>
+  <label class="sr" for="io-text">Build JSON</label>
+  <textarea id="io-text" rows="12" spellcheck="false"></textarea>
+  <div class="io-actions">
+    <button type="button" id="io-copy">Copy</button>
+    <button type="button" id="io-load" class="primary">Load pasted build</button>
+    <span id="io-msg" class="muted" role="status"></span>
+  </div>
+</dialog>
+<script>/*CATALOG*/</script>
+<script>/*ENGINE*/</script>
+<script>/*APP*/</script>
